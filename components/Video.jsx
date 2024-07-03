@@ -9,20 +9,21 @@ const Video = () => {
     }
   }, []);
   return (
-    <section className="h-screen w-screen ">
-      <div className="">
+    <section className="h-screen w-screen  ">
+      <div className="mt-12">
         <video
           ref={videoRef}
-          className="h-[50vh] md:h-[70vh] w-full object-cover  opacity-50"
+          className="h-[50vh] md:h-[70vh] w-full object-cover bg-fixed  opacity-50"
           autoPlay
           muted
           loop
+          preload="none"
         >
-          <source type="video/mp4" src="/hero_me.mp4" />
+          <source type="video/mp4" src="/hero_me1.mp4" />
         </video>
       </div>
-      <div className="details mt-16 mx-5">
-        <p className="text-xl md:text-3xl text-center uppercase md:leading-[2.5rem]">
+      <div className="details md:mt-16 mx-5">
+        <p className=" mt-12  md:text-3xl text-center uppercase md:leading-[2.5rem]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ad
           repudiandae facilis, necessitatibus modi reiciendis, in libero soluta,
           tempore sunt autem esse quibusdam fugiat earum! Repellat excepturi

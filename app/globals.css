@@ -159,11 +159,15 @@
   font-style: italic;
 }
 
+* {
+  scroll-behavior: smooth;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
   overflow-x: hidden;
   scroll-behavior: smooth;
+ 
   
   background: linear-gradient(
       to bottom,

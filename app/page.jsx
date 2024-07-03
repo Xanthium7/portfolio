@@ -170,7 +170,7 @@ export default function Home() {
     <>
       {/* cursor */}
       <div id="cursor" className="custom-cursor" />
-      <main className="w-screen h-screen flex flex-col cursor-none">
+      <main id="first" className="w-screen h-screen flex flex-col cursor-none">
         <nav
           id="nav"
           className="h-[60px] px-10 py-2 flex items-center justify-between border-b-[1px] border-[#bbbbbb27] "
@@ -201,19 +201,19 @@ export default function Home() {
 
         <div
           id="main"
-          className="h-[calc(100vh-60px)] mx-2 md:mx-10 flex flex-col justify-center  md:justify-end pt-56 md:pt-0 uppercase"
+          className="h-[calc(100vh-60px)] mx-2 md:mx-10 flex flex-col justify-center  md:justify-end pt-36 md:pt-0 uppercase"
         >
           <div id="text" className="flex justify-between ">
             <div
               onMouseEnter={enlarge}
               onMouseLeave={delarge}
-              className="w-full text-sm max-w-[60vw] md:max-w-[35vw] text-left md:ml-5 mb-3"
+              className="w-full text-xs md:text-lg max-w-[60vw] md:max-w-[35vw] text-left md:ml-5 mb-3 md:mb-[-1.2rem]"
             >
               <h1
                 onMouseEnter={enlarge2}
                 onMouseLeave={delarge2}
                 id="hi_text"
-                className="text-8xl"
+                className="text-3xl md:text-8xl"
               ></h1>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
               nostrum unde cumque optio{" "}
