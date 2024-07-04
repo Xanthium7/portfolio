@@ -8,6 +8,10 @@ import "./globals.css";
 import animationData from "../public/anim2.json"; // Update the path to your Lottie file
 import Video from "@/components/Video";
 import Footer from "@/components/Footer";
+import Skills from "@/components/Skills";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const animationRef = useRef(null);
@@ -41,7 +45,7 @@ export default function Home() {
 
   const enlarge = () => {
     gsap.to("#cursor", {
-      scale: 2,
+      scale: 3,
       duration: 0.1,
       ease: "power1.inOut",
     });
@@ -71,6 +75,7 @@ export default function Home() {
   };
 
   useGSAP(() => {
+    document.body.style.overflow = "hidden";
     gsap.fromTo(
       "#animation",
       {
@@ -124,9 +129,9 @@ export default function Home() {
     gsap.fromTo(
       ".dev-text",
       {
-        rotateZ: 30,
+        rotateZ: 0,
         y: 300,
-        opacity: 0,
+        opacity: 1,
       },
       {
         rotateZ: 0,
@@ -134,10 +139,15 @@ export default function Home() {
         opacity: 1,
         duration: 0.2,
         ease: "power1.inOut",
-        delay: d + 2,
-        stagger: 0.05, // Adjust the stagger value as needed for the desired delay between animations
+        delay: d + 2.5,
+        stagger: 0, // Adjust the stagger value as needed for the desired delay between animations
+        onComplete: () => {
+          // Re-enable scrolling
+          document.body.style.overflowY = "auto";
+        },
       }
     );
+    // add more here
   }, []);
   const developerLetters = "DEVELOPER".split("").map((letter, index) => (
     <span className="dev-text" key={index} style={{ display: "inline-block" }}>
@@ -147,7 +157,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       const hello = document.getElementById("hi_text");
-      const t = ["Hey", "नमस्ते", "ご挨拶", "ഹായ്", "Hola", "Bonjour", "Hello"];
+      const t = ["Hey", "नमस्ते", "ご挨拶", "ഹായ്", "Hola", "Bonjour", "Hey"];
       t.map((ele, i) =>
         setTimeout(() => {
           hello.innerHTML = ele;
@@ -158,7 +168,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       const hello = document.getElementById("hi_text");
-      const t = ["Hey", "नमस्ते", "ご挨拶", "ഹായ്", "Hola", "Bonjour", "Hello"];
+      const t = ["Hey", "नमस्ते", "ご挨拶", "ഹായ്", "Hola", "Bonjour", "Hey"];
       t.map((ele, i) =>
         setTimeout(() => {
           hello.innerHTML = ele;
@@ -233,13 +243,14 @@ export default function Home() {
           <div
             onMouseEnter={enlarge}
             onMouseLeave={delarge}
-            className={` dev_text text-[3.2rem] md:text-[15rem] p leading-none font-semibold `}
+            className={` dev_text text-[3.2rem] md:text-[15rem] p leading-none font-semibold  relative overflow-hidden `}
           >
             <h1 className=" ">{developerLetters}</h1>
           </div>
         </div>
       </main>
       <Video></Video>
+      <Skills></Skills>
       <Footer></Footer>
     </>
   );

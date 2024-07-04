@@ -163,6 +163,12 @@
   scroll-behavior: smooth;
 }
 
+.scroll_text_moving{
+  letter-spacing: 3px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(223, 223, 223);
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   overflow-x: hidden;
