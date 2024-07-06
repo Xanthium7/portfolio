@@ -131,7 +131,7 @@ const Skills = () => {
     // responsive: res,
   };
   return (
-    <div className="h-[100vh] md:h-[300vh] w-screen ">
+    <div className="h-[70vh] md:h-[300vh] w-screen ">
       <div
         className={`flex flex-col gap-16 ${inter.className} text-4xl md:text-8xl text-transparent`}
       >

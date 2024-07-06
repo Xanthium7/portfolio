@@ -10,6 +10,9 @@ import Video from "@/components/Video";
 import Footer from "@/components/Footer";
 import Skills from "@/components/Skills";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Projects from "@/components/Projects";
+import Parallax from "@/components/Parallax";
+import Contact from "@/components/Contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,6 +79,7 @@ export default function Home() {
 
   useGSAP(() => {
     document.body.style.overflow = "hidden";
+
     gsap.fromTo(
       "#animation",
       {
@@ -140,7 +144,7 @@ export default function Home() {
         duration: 0.2,
         ease: "power1.inOut",
         delay: d + 2.5,
-        stagger: 0, // Adjust the stagger value as needed for the desired delay between animations
+        stagger: 0.05, // Adjust the stagger value as needed for the desired delay between animations
         onComplete: () => {
           // Re-enable scrolling
           document.body.style.overflowY = "auto";
@@ -148,9 +152,38 @@ export default function Home() {
       }
     );
     // add more here
+    gsap.to(".common", {
+      scrollTrigger: {
+        trigger: ".dev-text",
+        start: "top bottom",
+        end: "bottom center",
+        scrub: 0.5,
+      },
+      opacity: 0,
+      scale: 0.75,
+      duration: 1,
+      ease: "power1.inOut",
+      // duration: 1,
+    });
+    gsap.to("#hi_text", {
+      scrollTrigger: {
+        trigger: ".dev-text",
+        start: "top bottom",
+        end: "bottom center",
+        scrub: 0.5,
+      },
+      opacity: 0,
+      duration: 1,
+      ease: "power1.inOut",
+      // duration: 1,
+    });
   }, []);
   const developerLetters = "DEVELOPER".split("").map((letter, index) => (
-    <span className="dev-text" key={index} style={{ display: "inline-block" }}>
+    <span
+      className="dev-text common"
+      key={index}
+      style={{ display: "inline-block" }}
+    >
       {letter}
     </span>
   ));
@@ -179,7 +212,7 @@ export default function Home() {
   return (
     <>
       {/* cursor */}
-      <div id="cursor" className="custom-cursor" />
+      <div id="cursor" className="custom-cursor text-xs" />
       <main id="first" className="w-screen h-screen flex flex-col cursor-none">
         <nav
           id="nav"
@@ -217,27 +250,32 @@ export default function Home() {
             <div
               onMouseEnter={enlarge}
               onMouseLeave={delarge}
-              className="w-full text-xs md:text-lg max-w-[60vw] md:max-w-[35vw] text-left md:ml-5 mb-3 md:mb-[-1.2rem]"
+              className="w-full text-xs md:text-lg max-w-[60vw] md:max-w-[35vw] text-left md:ml-5 mb-3 md:mb-[-1.2rem] relative"
             >
               <h1
                 onMouseEnter={enlarge2}
                 onMouseLeave={delarge2}
                 id="hi_text"
-                className="text-3xl md:text-8xl"
+                className=" text-3xl md:text-8xl"
               ></h1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              nostrum unde cumque optio{" "}
-              <span className="hidden md:inline">
-                cupiditate ab ad pariatur explicabo eligendi quam, aspernatur
-                deleniti beatae totam ut illum. Ipsam commodi eum tempora.
-              </span>
+              <p className="inline common">
+                I'm a developer who loves to create and explore new things. I
+                have a passion for{" "}
+                <span className="text-2xl mx-2 text-[#5b27b7]">AI</span> and{" "}
+                <span className="text-2xl mx-2 text-[#5b27b7]">FULL STACK</span>{" "}
+                development.{" "}
+                <span className="hidden md:inline">
+                  I'm currently working on a project that uses OpenAI's GPT-3 to
+                  generate code snippets based on user input.
+                </span>
+              </p>
             </div>
             <div
               onMouseEnter={enlarge}
               onMouseLeave={delarge}
               className="animate-bounce text-xs mr-5 hidden md:block"
             >
-              <p>Scroll to explore</p>
+              <p className="common">Scroll to explore</p>
             </div>
           </div>
           <div
@@ -245,12 +283,17 @@ export default function Home() {
             onMouseLeave={delarge}
             className={` dev_text text-[3.2rem] md:text-[15rem] p leading-none font-semibold  relative overflow-hidden `}
           >
-            <h1 className=" ">{developerLetters}</h1>
+            <h1 className="max-w-[100vw] max-h-fit">{developerLetters}</h1>
           </div>
         </div>
       </main>
       <Video></Video>
       <Skills></Skills>
+      <Projects></Projects>
+      <Parallax></Parallax>
+      <Contact></Contact>
+      {/* <Projects></Projects> */}
+      {/*  */}
       <Footer></Footer>
     </>
   );

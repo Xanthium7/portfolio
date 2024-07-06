@@ -29,6 +29,15 @@
   mix-blend-mode: difference; 
   /* filter: invert(100%); */
   background-color: rgb(224, 224, 224);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url("https://i.pinimg.com/236x/87/00/7f/87007f40dee20259447d453e5decffbc.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
   
   left: -100px;
   
@@ -38,127 +47,6 @@
   transform: scale(2); /* Adjust the scale factor as needed */
   transition: transform 0.2s ease-in-out; /* Smooth transition for the cursor size change */
 }
-
-.electrolize-regular {
-  font-family: "Electrolize", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-.electrolize-light {
-  font-family: "Electrolize", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-
-.f-thin {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.f-extralight {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.f-light {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.f-regular {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.f-medium {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.f-semibold {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.f-bold {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.f-extrabold {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.f-black {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.f-thin-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.f-extralight-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.f-light-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.f-regular-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.f-medium-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.f-semibold-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.f-bold-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.f-extrabold-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.f-black-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
 * {
   scroll-behavior: smooth;
 }
@@ -168,6 +56,8 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(223, 223, 223);
 }
+
+/* .p_text:hover .custom-cursor{ background-color: yellow; } */
 
 body {
   color: rgb(var(--foreground-rgb));
