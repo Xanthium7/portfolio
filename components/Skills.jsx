@@ -66,6 +66,7 @@ const Skills = () => {
         },
       },
       width: "100%",
+      // background: "#b72752",
       duration: 1,
     });
     gsap.from("#hif", {
@@ -75,7 +76,7 @@ const Skills = () => {
         end: "bottom center",
         scrub: 0.5,
       },
-      y: 50,
+      y: 150,
       duration: 1,
       ease: "power1.inOut",
     });
@@ -131,7 +132,7 @@ const Skills = () => {
     // responsive: res,
   };
   return (
-    <div className="h-[70vh] md:h-[300vh] w-screen ">
+    <div className="h-[70vh] md:h-[330vh] w-screen ">
       <div
         className={`flex flex-col gap-16 ${inter.className} text-4xl md:text-8xl text-transparent`}
       >
@@ -202,7 +203,11 @@ const Skills = () => {
           className=" w-[80%] h-[60vh]  flex flex-col justify-center "
         >
           <div className=" relative overflow-hidden">
-            <h1 id="hif" className="md:text-3xl mb-5">
+            <h1
+              id="hif"
+              className="md:text-6xl mb-5 "
+              style={{ textShadow: "3px 3px 5px #5b27b7" }}
+            >
               HOW I FUNCTION
             </h1>
           </div>

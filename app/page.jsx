@@ -13,6 +13,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Projects from "@/components/Projects";
 import Parallax from "@/components/Parallax";
 import Contact from "@/components/Contact";
+import CoolShit from "@/components/CoolShit";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +26,10 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      animationRef.current.setSpeed(0.5);
+      animationRef.current.setSpeed(0);
+      setTimeout(() => {
+        animationRef.current.setSpeed(0.7);
+      }, 2000);
     } catch (error) {
       console.log(error);
     }
@@ -78,6 +82,17 @@ export default function Home() {
   };
 
   useGSAP(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
+    });
+
+    if (window.scrollY > 0) {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
+      });
+    }
     document.body.style.overflow = "hidden";
 
     gsap.fromTo(
@@ -212,7 +227,10 @@ export default function Home() {
   return (
     <>
       {/* cursor */}
-      <div id="cursor" className="custom-cursor text-xs" />
+      <div
+        id="cursor"
+        className="custom-cursor text-xs opacity-0 md:opacity-100"
+      />
       <main id="first" className="w-screen h-screen flex flex-col cursor-none">
         <nav
           id="nav"
@@ -220,10 +238,10 @@ export default function Home() {
         >
           <div className=" text-sm font-bold">AKSHHAY KM</div>
           <div className="text-xs hidden md:block transition-all hover:opacity-20 cursor-pointer">
-            AI DEVELOPER
+            <a href="#p2-text">AI DEVELOPER</a>
           </div>
           <div className="text-xs hidden md:block transition-all hover:opacity-20 cursor-pointer">
-            FULL STACK
+            <a href="#p-text">FULL STACK</a>
           </div>
           <div className="border border-1 border-white p-2 rounded-full px-6 text-xs transition-all hover:bg-slate-100 hover:text-black">
             <a href="">CONTACT</a>
@@ -257,6 +275,7 @@ export default function Home() {
                 onMouseLeave={delarge2}
                 id="hi_text"
                 className=" text-3xl md:text-8xl"
+                style={{ textShadow: "2px 2px 5px #5b27b7" }}
               ></h1>
               <p className="inline common">
                 I'm a developer who loves to create and explore new things. I
@@ -265,8 +284,7 @@ export default function Home() {
                 <span className="text-2xl mx-2 text-[#5b27b7]">FULL STACK</span>{" "}
                 development.{" "}
                 <span className="hidden md:inline">
-                  I'm currently working on a project that uses OpenAI's GPT-3 to
-                  generate code snippets based on user input.
+                  I'm currently working on a project that uses LLMS
                 </span>
               </p>
             </div>
@@ -283,12 +301,18 @@ export default function Home() {
             onMouseLeave={delarge}
             className={` dev_text text-[3.2rem] md:text-[15rem] p leading-none font-semibold  relative overflow-hidden `}
           >
-            <h1 className="max-w-[100vw] max-h-fit">{developerLetters}</h1>
+            <h1
+              className="max-w-[100vw] max-h-fit"
+              style={{ textShadow: "2px 2px 5px #5b27b7" }}
+            >
+              {developerLetters}
+            </h1>
           </div>
         </div>
       </main>
       <Video></Video>
       <Skills></Skills>
+      <CoolShit></CoolShit>
       <Projects></Projects>
       <Parallax></Parallax>
       <Contact></Contact>

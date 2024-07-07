@@ -4,7 +4,10 @@ const Footer = () => {
   return (
     <footer className="h-[30vh] w-screen ">
       <div className="w-full h-full flex flex-col justify-center  relative">
-        <h1 className="text-[2.5rem] lg:text-[12rem]  font-bold mx-2">
+        <h1
+          className="text-[2.5rem] lg:text-[12rem]  font-bold mx-2"
+          style={{ textShadow: "3px 3px 5px #5b27b7" }}
+        >
           DROP ME A LINE
         </h1>
         <hr className="mb-2 " />

@@ -60,7 +60,7 @@ const Projects = () => {
       },
       y: 150,
       opacity: 0,
-      duration: 1,
+      duration: 2,
       ease: "power1.inOut",
       stagger: 0.9,
     });
@@ -73,7 +73,7 @@ const Projects = () => {
       },
       y: 150,
       opacity: 0,
-      duration: 1,
+      duration: 2,
       ease: "power1.inOut",
       stagger: 0.9,
     });
@@ -90,6 +90,7 @@ const Projects = () => {
     gsap.to(".preview_img", {
       y: 0,
       duration: 0.3,
+      opacity: 1,
       ease: "power1.inOut",
     });
     setprojectView(1);
@@ -99,6 +100,7 @@ const Projects = () => {
       y: -190,
       duration: 0.3,
       ease: "power1.inOut",
+      opacity: 1,
     });
     setprojectView(1);
   };
@@ -107,6 +109,7 @@ const Projects = () => {
       y: -380,
       duration: 0.3,
       ease: "power1.inOut",
+      opacity: 1,
     });
     setprojectView(1);
   };
@@ -115,6 +118,7 @@ const Projects = () => {
       y: -570,
       duration: 0.3,
       ease: "power1.inOut",
+      opacity: 1,
     });
     setprojectView(1);
   };
@@ -123,6 +127,7 @@ const Projects = () => {
       y: 190,
       duration: 0.3,
       ease: "power1.inOut",
+      opacity: 0,
     });
     setprojectView(0);
   };
@@ -131,6 +136,7 @@ const Projects = () => {
       y: 0,
       duration: 0.3,
       ease: "power1.inOut",
+      opacity: 1,
     });
     setprojectView(1);
   };
@@ -139,6 +145,7 @@ const Projects = () => {
       y: -190,
       duration: 0.3,
       ease: "power1.inOut",
+      opacity: 1,
     });
     setprojectView(1);
   };
@@ -147,6 +154,7 @@ const Projects = () => {
       y: -380,
       duration: 0.3,
       ease: "power1.inOut",
+      opacity: 1,
     });
     setprojectView(1);
   };
@@ -155,6 +163,7 @@ const Projects = () => {
       y: -570,
       duration: 0.3,
       ease: "power1.inOut",
+      opacity: 1,
     });
     setprojectView(1);
   };
@@ -164,6 +173,7 @@ const Projects = () => {
       y: 190,
       duration: 0.3,
       ease: "power1.inOut",
+      opacity: 0,
     });
     setprojectView(0);
   };
@@ -184,7 +194,7 @@ const Projects = () => {
   //   "PROJECT 4",
   //   "PROJECT 5",
   // ].map((items, index) => (
-  //   <div className="h-24 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 transition-all duration-150 ">
+  //   <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 transition-all duration-150 ">
   //     <h1
   //       onMouseEnter={enlarge2}
   //       onMouseLeave={delarge2}
@@ -199,10 +209,14 @@ const Projects = () => {
   return (
     <div className="">
       <div
-        className="preview absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40"
+        className="preview absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
         st
       >
-        <img className="preview_img w-full h-fit" src="/p_img.png" alt="" />
+        <img
+          className="preview_img w-full h-fit opacity-0"
+          src="/p_img.png"
+          alt=""
+        />
       </div>
       <div className="h-screen w-screen ">
         <div className="mx-5 flex flex-col h-full gap-10">
@@ -210,13 +224,14 @@ const Projects = () => {
             <h1
               id="p-text"
               className="text-3xl md:text-7xl uppercase font-semibold"
+              style={{ textShadow: "3px 3px 5px #5b27b7" }}
             >
               WEB DEV Projects
             </h1>
           </div>
 
           <div className="flex flex-col gap-3 ">
-            <div className="h-24 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-48 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate1}
                 onMouseLeave={img_translate_exit}
@@ -226,7 +241,7 @@ const Projects = () => {
                 PROJECT 1
               </h1>
             </div>
-            <div className="h-24 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
               <h1
                 onMouseEnter={img_translate2}
                 onMouseLeave={img_translate_exit}
@@ -236,7 +251,7 @@ const Projects = () => {
                 PROJECT 2
               </h1>
             </div>
-            <div className="h-24 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate3}
                 onMouseLeave={img_translate_exit}
@@ -246,7 +261,7 @@ const Projects = () => {
                 PROJECT
               </h1>
             </div>
-            <div className="h-24 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate4}
                 onMouseLeave={img_translate_exit}
@@ -261,58 +276,63 @@ const Projects = () => {
       </div>
       {/* AI SECTION */}
       <div
-        className="preview2 absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40"
+        className="preview2 absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
         st
       >
-        <img className="preview_img2 w-full h-fit" src="/p2_img.png" alt="" />
+        <img
+          className="preview_img2 w-full h-fit opacity-0"
+          src="/p2_img.png"
+          alt=""
+        />
       </div>
       <div className="h-screen w-screen ">
         <div className="mx-5 flex flex-col h-full gap-10">
           <div className="relative overflow-hidden ">
             <h1
-              id="p-text"
+              id="p2-text"
               className="text-3xl md:text-7xl uppercase font-semibold"
+              style={{ textShadow: "3px 3px 5px #5b27b7" }}
             >
               ai projects
             </h1>
           </div>
 
           <div className="flex flex-col gap-3 ">
-            <div className="h-24 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate1_ai}
                 onMouseLeave={img_translate_exit_ai}
-                id="p-text"
+                id="p2-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]  "
               >
                 PROJECT 1
               </h1>
             </div>
-            <div className="h-24 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
               <h1
                 onMouseEnter={img_translate2_ai}
                 onMouseLeave={img_translate_exit_ai}
-                id="p-text"
+                id="p2-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
                 PROJECT 2
               </h1>
             </div>
-            <div className="h-24 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate3_ai}
                 onMouseLeave={img_translate_exit_ai}
-                id="p-text"
+                id="p2-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
                 PROJECT
               </h1>
             </div>
-            <div className="h-24 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate4_ai}
                 onMouseLeave={img_translate_exit_ai}
-                id="p-text"
+                id="p2-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
                 PROJECT
