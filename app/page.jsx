@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Lottie from "lottie-react";
 import "./globals.css";
-
+import Lenis from "lenis";
 import animationData from "../public/anim2.json"; // Update the path to your Lottie file
 import Video from "@/components/Video";
 import Footer from "@/components/Footer";
@@ -93,6 +93,7 @@ export default function Home() {
         behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
       });
     }
+    document.body.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
 
     gsap.fromTo(
@@ -224,6 +225,20 @@ export default function Home() {
       );
     }, 0);
   }, [hi_s]);
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    // lenis.on("scroll", (e) => {
+    //   console.log(e);
+    // });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <>
       {/* cursor */}

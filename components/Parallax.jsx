@@ -5,24 +5,150 @@ import React from "react";
 
 const Parallax = () => {
   useGSAP(() => {
-    // gsap.to("#img_holder_1", {
+    // gsap.to("#container", {
     //   scrollTrigger: {
-    //     trigger: "#img_holder_1",
-    //     start: "top center",
-    //     end: "bottom center",
-    //     scrub: 1,
+    //     trigger: "#container",
+    //     start: "top bottom",
+    //     end: "bottom top",
+    //     scrub: 0.01,
+    //     // pin: "#container",
     //   },
-    //   x: -280,
+    //   height: "100%",
     //   duration: 1,
     //   ease: "power1.inOut",
     // });
+    // gsap.to("#img_holder_1", {
+    //   scrollTrigger: {
+    //     trigger: "#img_holder",
+    //     start: "top top",
+    //     end: "bottom bottom",
+    //     scrub: 0.01,
+    //     pin: "#holder",
+    //   },
+    //   y: "-60%",
+    //   duration: 0.5,
+    //   ease: "power1.inOut",
+    // });
+    gsap.to("#container", {
+      scrollTrigger: {
+        trigger: "#container",
+        start: "top top", // Start pinning at the top of the viewport
+        end: "bottom bottom", // End pinning at the bottom of the viewport
+        scrub: true, // Smooth scrubbing, consider setting to a number for smoother scrubbing
+        pin: true, // Pin the element
+      },
+    });
+    gsap.to("#img_holder_1", {
+      scrollTrigger: {
+        trigger: "#holder",
+        start: "top bottom", // Start pinning at the top of the viewport
+        end: "bottom center", // End pinning at the bottom of the viewport
+        scrub: 0.1, // Smooth scrubbing, consider setting to a number for smoother scrubbing
+      },
+      y: "-60%",
+      duration: 2,
+    });
+    gsap.to("#img_holder_2", {
+      scrollTrigger: {
+        trigger: "#holder",
+        start: "top bottom", // Start pinning at the top of the viewport
+        end: "bottom center", // End pinning at the bottom of the viewport
+        scrub: 0.1, // Smooth scrubbing, consider setting to a number for smoother scrubbing
+      },
+      y: "30%",
+      duration: 2,
+    });
+    gsap.to("#img_holder_3", {
+      scrollTrigger: {
+        trigger: "#holder",
+        start: "top bottom", // Start pinning at the top of the viewport
+        end: "bottom center", // End pinning at the bottom of the viewport
+        scrub: 0.1, // Smooth scrubbing, consider setting to a number for smoother scrubbing
+      },
+      y: "-40%",
+      duration: 2,
+    });
+    gsap.to("#img_holder_4", {
+      scrollTrigger: {
+        trigger: "#holder",
+        start: "top bottom", // Start pinning at the top of the viewport
+        end: "bottom center", // End pinning at the bottom of the viewport
+        scrub: 0.1, // Smooth scrubbing, consider setting to a number for smoother scrubbing
+      },
+      y: "20%",
+      duration: 2,
+    });
   }, []);
+
   return (
-    <div className="h-screen w-screen">
-      <div id="img_holder_1" className="h-1/2">
-        IMG HOLDER
+    <div className="h-[30vh] md:h-[100vh] w-screen overflow-hidden">
+      <div
+        id="container"
+        className="bg-[#5c27b713]  w-full h-[100%] overflow-hidden z-40"
+      >
+        <div id="holder" className="overflow-hidden ">
+          <div id="img_holder" className="flex gap-2 md:gap-5">
+            <div
+              id="img_holder_1"
+              className="w-1/4  flex flex-col gap-2 md:gap-5 translate-y-[-30%]"
+            >
+              <div className="h-1/3 overflow-hidden object-center rounded-xl">
+                <img className=" object-cover" src="_1.jpeg" alt="" />
+              </div>
+              <div className="h-1/3 overflow-hidden object-center">
+                <img className=" object-cover" src="_2.jpeg" alt="" />
+              </div>
+              <div className="h-1/3 overflow-hidden object-center">
+                <img className=" object-cover" src="_3.jpeg" alt="" />
+              </div>
+            </div>
+            <div
+              id="img_holder_2"
+              className="w-1/4  flex flex-col gap-2 md:gap-5 translate-y-[-50%]"
+            >
+              <div className="h-1/3 overflow-hidden object-center rounded-xl">
+                <img className=" object-cover" src="_1.jpeg" alt="" />
+              </div>
+              <div className="h-1/3 overflow-hidden object-center">
+                <img className=" object-cover" src="_2.jpeg" alt="" />
+              </div>
+              <div className="h-1/3 overflow-hidden object-center">
+                <img className=" object-cover" src="_3.jpeg" alt="" />
+              </div>
+            </div>
+            <div
+              id="img_holder_3"
+              className="w-1/4  flex flex-col gap-2 md:gap-5"
+            >
+              <div className="h-1/3 overflow-hidden object-center rounded-xl">
+                <img className=" object-cover" src="_1.jpeg" alt="" />
+              </div>
+              <div className="h-1/3 overflow-hidden object-center">
+                <img className=" object-cover" src="_2.jpeg" alt="" />
+              </div>
+              <div className="h-1/3 overflow-hidden object-center">
+                <img className=" object-cover" src="_3.jpeg" alt="" />
+              </div>
+            </div>
+            <div
+              id="img_holder_4"
+              className="w-1/4  flex flex-col gap-2 md:gap-5 translate-y-[-30%]"
+            >
+              <div className="h-1/3 overflow-hidden object-center rounded-xl">
+                <img className=" object-cover" src="_1.jpeg" alt="" />
+              </div>
+              <div className="h-1/3 overflow-hidden object-center">
+                <img className=" object-cover" src="_2.jpeg" alt="" />
+              </div>
+              <div className="h-1/3 overflow-hidden object-center">
+                <img className=" object-cover" src="_3.jpeg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="h-1/2"></div>
       </div>
-      <div className="h-1/2"></div>
     </div>
   );
 };

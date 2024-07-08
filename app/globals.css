@@ -58,6 +58,29 @@
 }
 
 /* .p_text:hover .custom-cursor{ background-color: yellow; } */
+::selection {
+  
+  background: #5b27b7;
+}
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
 
 body {
   color: rgb(var(--foreground-rgb));

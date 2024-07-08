@@ -12,6 +12,7 @@
     "@gsap/react": "^2.1.1",
     "@lottiefiles/lottie-interactivity": "^1.6.2",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.6",
     "lottie-react": "^2.4.0",
     "lottie-web": "^5.12.2",
     "next": "14.2.4",
