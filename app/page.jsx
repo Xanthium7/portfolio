@@ -280,7 +280,7 @@ export default function Home() {
           id="main"
           className="h-[calc(100vh-60px)] mx-2 md:mx-10 flex flex-col justify-center  md:justify-end pt-36 md:pt-0 uppercase"
         >
-          <div id="text" className="flex justify-between ">
+          <div id="text" className="flex justify-between z-30">
             <div
               onMouseEnter={enlarge}
               onMouseLeave={delarge}
@@ -293,7 +293,7 @@ export default function Home() {
                 className=" text-3xl md:text-8xl"
                 style={{ textShadow: "2px 2px 5px #5b27b7" }}
               ></h1>
-              <p className="inline common">
+              <p className="inline common z-30">
                 I'm a developer who loves to create and explore new things. I
                 have a passion for{" "}
                 <span className="text-2xl mx-2 text-[#5b27b7]">AI</span> and{" "}
@@ -315,10 +315,10 @@ export default function Home() {
           <div
             onMouseEnter={enlarge}
             onMouseLeave={delarge}
-            className={` dev_text text-[3.2rem] md:text-[15rem] p leading-none font-semibold  relative overflow-hidden `}
+            className={` dev_text text-[3.2rem] md:text-[15rem] z-30 leading-none font-semibold  relative overflow-hidden `}
           >
             <h1
-              className="max-w-[100vw] max-h-fit"
+              className="max-w-[100vw] max-h-fit "
               style={{ textShadow: "2px 2px 5px #5b27b7" }}
             >
               {developerLetters}
