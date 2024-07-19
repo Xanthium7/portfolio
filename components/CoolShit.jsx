@@ -15,7 +15,7 @@ const CoolShit = () => {
         </div>
         <div className="flex flex-col gap-96">
           <div className="flex flex-col md:flex-row gap-10 w-full">
-            <div className="img1_holder w-full md:w-1/2">
+            <div className="img1_holder w-full md:w-1/2  overflow-hidden  ">
               <img src="/3.png" alt="image" />
             </div>
             <div className="text_1_holder text-sm md:text-2xl w-full md:w-1/2  flex justify-center items-center">

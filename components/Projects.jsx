@@ -241,12 +241,12 @@ const Projects = () => {
                 PROJECT 1
               </h1>
             </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl   relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
               <h1
                 onMouseEnter={img_translate2}
                 onMouseLeave={img_translate_exit}
                 id="p-text"
-                className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
+                className="p_1 h-full flex items-center  w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
                 PROJECT 2
               </h1>
@@ -290,7 +290,7 @@ const Projects = () => {
           <div className="relative overflow-hidden ">
             <h1
               id="p2-text"
-              className="text-3xl md:text-7xl uppercase font-semibold"
+              className="text-3xl md:text-7xl text-right uppercase font-semibold"
               style={{ textShadow: "3px 3px 5px #5b27b7" }}
             >
               ai projects
