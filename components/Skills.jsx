@@ -200,7 +200,7 @@ const Skills = () => {
       <div id="h_holder" className="hidden md:flex  w-full  justify-center">
         <div
           id="p_holder"
-          className=" w-[80%] h-[60vh]  flex flex-col justify-center "
+          className=" w-[80%] h-[70vh]  flex flex-col justify-center  "
         >
           <div className=" relative overflow-hidden">
             <h1

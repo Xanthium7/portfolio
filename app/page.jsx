@@ -14,7 +14,8 @@ import Projects from "@/components/Projects";
 import Parallax from "@/components/Parallax";
 import Contact from "@/components/Contact";
 import CoolShit from "@/components/CoolShit";
-import Organisations from "@/components/Organisations";
+import { OrbitingCirclesDemo } from "@/components/OrbitingCirclesDemo";
+// import Organisations from "@/components/Organisations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -329,7 +330,9 @@ export default function Home() {
       <Video></Video>
       <Skills></Skills>
       {/* <CoolShit></CoolShit> */}
-      <Organisations></Organisations>
+      {/* <Organisations></Organisations> */}
+      <OrbitingCirclesDemo></OrbitingCirclesDemo>
+
       <Projects></Projects>
       <Parallax></Parallax>
 
