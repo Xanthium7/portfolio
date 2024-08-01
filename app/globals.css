@@ -152,6 +152,7 @@ html.lenis, html.lenis body {
 body {
   color: white;
   overflow-x: hidden;
+  
   overflow-y: auto;
   scroll-behavior: smooth;
  
@@ -159,6 +160,37 @@ body {
     
 }
 
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  3% {
+    opacity: 0.2;
+  }
+  7% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  13% {
+    opacity: 1;
+  }
+  
+  
+}
+
+.velocity_scroll_thingy {
+  animation: flicker 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

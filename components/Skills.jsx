@@ -8,6 +8,7 @@ import animationData from "../public/s_load.json";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Arrow from "./Arrow";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,12 +115,15 @@ const Skills = () => {
     slidesToScroll: 1,
     autoplay: true,
     pauseOnHover: false,
+    nextArrow: <Arrow />,
+    prevArrow: <Arrow />,
 
-    autoplaySpeed: 1400,
+    autoplaySpeed: 0,
     cssEase: "linear",
     // responsive: res,
   };
   const settings2 = {
+    dots: false,
     infinite: true,
     speed: 1400,
     slidesToShow: 3,
@@ -127,12 +131,12 @@ const Skills = () => {
     autoplay: true,
     pauseOnHover: false,
     rtl: true,
-    autoplaySpeed: 1400,
+    autoplaySpeed: 0,
     cssEase: "linear",
     // responsive: res,
   };
   return (
-    <div className="h-[40vh] md:h-[330vh] w-screen ">
+    <div className="h-[40vh] md:h-[330vh] w-screen cursor-none">
       <div
         className={`flex flex-col gap-16 ${inter.className} text-4xl md:text-8xl text-transparent`}
       >

@@ -300,14 +300,14 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Particles
+      {/* <Particles
         className="absolute inset-0 cursor-none"
         quantity={150}
         staticity={20}
         ease={80}
         // color={color}
         refresh
-      />
+      /> */}
     </>
   );
 };

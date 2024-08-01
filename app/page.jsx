@@ -15,6 +15,7 @@ import Parallax from "@/components/Parallax";
 import Contact from "@/components/Contact";
 import CoolShit from "@/components/CoolShit";
 import { OrbitingCirclesDemo } from "@/components/OrbitingCirclesDemo";
+import Particles from "@/components/magicui/particles";
 // import Organisations from "@/components/Organisations";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -50,6 +51,21 @@ export default function Home() {
     return () => {
       window.removeEventListener("mousemove", moveCursor);
     };
+  }, []);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
+    });
+
+    if (window.scrollY > 0) {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
+      });
+    }
+    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
   }, []);
   useEffect(() => {
     setTimeout(() => {
@@ -94,21 +110,6 @@ export default function Home() {
     });
     setHi_s(0);
   };
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
-    });
-
-    if (window.scrollY > 0) {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
-      });
-    }
-    document.body.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
-  }, []);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -248,7 +249,18 @@ export default function Home() {
         id="cursor"
         className="custom-cursor text-xs opacity-0 md:opacity-100"
       />
-      <main id="first" className="w-screen h-screen flex flex-col cursor-none">
+      <main
+        id="first"
+        className="w-screen h-screen flex flex-col cursor-none relative"
+      >
+        <Particles
+          className="absolute inset-0 cursor-none"
+          quantity={150}
+          staticity={20}
+          ease={80}
+          // color={color}
+          refresh
+        />
         <nav
           id="nav"
           className="h-[60px] px-10 py-2 flex items-center justify-between border-b-[1px] border-[#bbbbbb27] "
@@ -297,12 +309,12 @@ export default function Home() {
               <p className="inline common z-30">
                 I'm a developer who loves to create and explore new things. I
                 have a passion for{" "}
-                <span className="text-lg md:text-2xl md:mx-2 text-[#5b27b7]">
+                <span className="text-lg md:text-2xl md:mx-2 text-[#8945ff]">
                   <br className="md:hidden" />
                   AI
                 </span>{" "}
                 and{" "}
-                <span className="text-lg md:text-2xl md:mx-2 text-[#5b27b7]">
+                <span className="text-lg md:text-2xl md:mx-2 text-[#8945ff]">
                   FULL STACK
                 </span>{" "}
                 development.{" "}
