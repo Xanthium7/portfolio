@@ -55,7 +55,7 @@ const Parallax = () => {
         end: "bottom center", // End pinning at the bottom of the viewport
         scrub: 0.1, // Smooth scrubbing, consider setting to a number for smoother scrubbing
       },
-      y: "-40%",
+      y: window.innerWidth > 768 ? "40%" : "-30%",
       duration: 2,
     });
     gsap.to("#img_holder_3", {
@@ -81,67 +81,67 @@ const Parallax = () => {
   }, []);
 
   return (
-    <div className="h-[40vh] md:h-[120vh] w-screen overflow-hidden">
+    <div className="h-[50vh] md:h-[120vh] w-screen overflow-hidden">
       <div
         id="container"
-        className="bg-[#5c27b713]  w-full h-[100%] overflow-hidden z-40"
+        className="bg-[#3d3d3df1]  w-full h-[100%] overflow-hidden z-40"
       >
         <div id="holder" className="overflow-hidden ">
           <div id="img_holder" className="flex gap-2 md:gap-5">
             <div
               id="img_holder_1"
-              className="w-1/4 h-full flex flex-col gap-2 md:gap-5 translate-y-[0%]"
+              className="w-1/2 md:w-1/4 h-full flex flex-col gap-2 md:gap-5 translate-y-[0%]"
             >
-              <div className="h-1/3 overflow-hidden object-center rounded-xl">
-                <img className=" object-cover" src="_1.jpeg" alt="" />
+              <div className="h-1/3 overflow-hidden object-center rounded-3xl">
+                <img className=" object-cover" src="_1.png" alt="" />
               </div>
               <div className="h-1/3 overflow-hidden object-center">
-                <img className=" object-cover" src="_2.jpeg" alt="" />
+                <img className=" object-cover" src="_2.png" alt="" />
               </div>
               <div className="h-1/3 overflow-hidden object-center">
-                <img className=" object-cover" src="_3.jpeg" alt="" />
+                <img className=" object-cover" src="_3.png" alt="" />
               </div>
             </div>
             <div
               id="img_holder_2"
-              className="w-1/4 h-full flex flex-col gap-2 md:gap-5 translate-y-[-50%]"
+              className=" w-1/2 md:w-1/4 h-full flex flex-col gap-2 md:gap-5 md:translate-y-[-50%]"
             >
-              <div className="h-1/3 overflow-hidden object-center rounded-xl">
-                <img className=" object-cover" src="_4.jpeg" alt="" />
+              <div className="h-1/3 overflow-hidden object-center rounded-3xl">
+                <img className=" object-cover" src="_4.png" alt="" />
               </div>
               <div className="h-1/3 overflow-hidden object-center">
-                <img className=" object-cover" src="_5.jpeg" alt="" />
+                <img className=" object-cover" src="_5.png" alt="" />
               </div>
-              <div className="h-1/3 mt-[-10px] overflow-hidden object-center  ">
-                <img className="  object-cover" src="_6.jpeg" alt="" />
+              <div className="h-1/3  overflow-hidden object-center  ">
+                <img className="  object-cover" src="_6.png" alt="" />
               </div>
             </div>
             <div
               id="img_holder_3"
-              className="w-1/4  h-full flex flex-col gap-2 md:gap-5"
+              className="w-0 md:w-1/4  h-full flex flex-col gap-2 md:gap-5"
             >
-              <div className="h-1/3 overflow-hidden object-center rounded-xl">
-                <img className=" object-cover" src="_7.jpeg" alt="" />
+              <div className="h-1/3 overflow-hidden object-center rounded-3xl">
+                <img className=" object-cover" src="_7.png" alt="" />
               </div>
               <div className="h-1/3 overflow-hidden object-center">
-                <img className=" object-cover" src="_4.jpeg" alt="" />
+                <img className=" object-cover" src="_4.png" alt="" />
               </div>
               <div className="h-1/3 overflow-hidden object-center">
-                <img className=" object-cover" src="_8.jpeg" alt="" />
+                <img className=" object-cover" src="_8.png" alt="" />
               </div>
             </div>
             <div
               id="img_holder_4"
-              className="w-1/4 h-full  flex flex-col gap-2 md:gap-5 translate-y-[-20%]"
+              className="w-0 md:w-1/4 h-full  flex flex-col gap-2 md:gap-5 translate-y-[-20%]"
             >
-              <div className="h-1/3 overflow-hidden object-center rounded-xl">
-                <img className=" object-cover" src="_8.jpeg" alt="" />
+              <div className="h-1/3 overflow-hidden object-center rounded-3xl">
+                <img className=" object-cover" src="_8.png" alt="" />
               </div>
               <div className="h-1/3 overflow-hidden object-center">
-                <img className=" object-cover" src="_9.jpeg" alt="" />
+                <img className=" object-cover" src="_9.png" alt="" />
               </div>
               <div className="h-1/3 overflow-hidden object-center">
-                <img className=" object-cover" src="_3.jpeg" alt="" />
+                <img className=" object-cover" src="_4.png" alt="" />
               </div>
             </div>
           </div>

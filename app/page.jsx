@@ -51,6 +51,18 @@ export default function Home() {
       window.removeEventListener("mousemove", moveCursor);
     };
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      const lenis = new Lenis();
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    }, 5000);
+  }, []);
 
   const enlarge = () => {
     gsap.to("#cursor", {
@@ -82,8 +94,7 @@ export default function Home() {
     });
     setHi_s(0);
   };
-
-  useGSAP(() => {
+  useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
@@ -97,7 +108,9 @@ export default function Home() {
     }
     document.body.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+  }, []);
 
+  useGSAP(() => {
     gsap.fromTo(
       "#animation",
       {
@@ -227,20 +240,7 @@ export default function Home() {
       );
     }, 0);
   }, [hi_s]);
-  useEffect(() => {
-    const lenis = new Lenis();
 
-    // lenis.on("scroll", (e) => {
-    //   console.log(e);
-    // });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <>
       {/* cursor */}
@@ -297,8 +297,14 @@ export default function Home() {
               <p className="inline common z-30">
                 I'm a developer who loves to create and explore new things. I
                 have a passion for{" "}
-                <span className="text-2xl mx-2 text-[#5b27b7]">AI</span> and{" "}
-                <span className="text-2xl mx-2 text-[#5b27b7]">FULL STACK</span>{" "}
+                <span className="text-lg md:text-2xl md:mx-2 text-[#5b27b7]">
+                  <br className="md:hidden" />
+                  AI
+                </span>{" "}
+                and{" "}
+                <span className="text-lg md:text-2xl md:mx-2 text-[#5b27b7]">
+                  FULL STACK
+                </span>{" "}
                 development.{" "}
                 <span className="hidden md:inline">
                   I'm currently working on a project that uses LLMS
@@ -319,7 +325,7 @@ export default function Home() {
             className={` dev_text text-[3.2rem] md:text-[15rem] z-30 leading-none font-semibold  relative overflow-hidden `}
           >
             <h1
-              className="max-w-[100vw] max-h-fit "
+              className="max-w-[100vw] max-h-fit whitespace-nowrap "
               style={{ textShadow: "2px 2px 5px #5b27b7" }}
             >
               {developerLetters}

@@ -36,7 +36,7 @@ const Contact = () => {
     gsap.from("#c_text", {
       scrollTrigger: {
         trigger: "#c_text",
-        start: window.innerWidth > 768 ? "bottom 70%" : "top 70%",
+        start: window.innerWidth > 768 ? "bottom 70%" : "top 90%",
         end: "bottom center",
         scrub: 0.5,
       },

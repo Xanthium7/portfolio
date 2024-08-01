@@ -209,7 +209,7 @@ const Projects = () => {
   return (
     <div className="">
       <div
-        className="preview absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
+        className="opacity-0 md:opacity-100 preview absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
         st
       >
         <img
@@ -223,7 +223,7 @@ const Projects = () => {
           <div className="relative overflow-hidden ">
             <h1
               id="p-text"
-              className="text-3xl md:text-7xl uppercase font-semibold"
+              className=" text-3xl md:text-7xl uppercase font-semibold"
               style={{ textShadow: "3px 3px 5px #5b27b7" }}
             >
               WEB DEV Projects
@@ -231,44 +231,47 @@ const Projects = () => {
           </div>
 
           <div className="flex flex-col gap-3 ">
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-48 opacity-20 hover:opacity-100 transition-all">
-              <h1
-                onMouseEnter={img_translate1}
-                onMouseLeave={img_translate_exit}
-                id="p-text"
-                className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]  "
-              >
-                PROJECT 1
-              </h1>
-            </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl   relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
+            <a href="">
+              <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-48 opacity-20 hover:opacity-100 transition-all">
+                <h1
+                  onMouseEnter={img_translate1}
+                  onMouseLeave={img_translate_exit}
+                  id="p-text"
+                  className="p_1  h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]  "
+                >
+                  TESLA WEBSITE CLONE
+                </h1>
+              </div>
+            </a>
+
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl   relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
               <h1
                 onMouseEnter={img_translate2}
                 onMouseLeave={img_translate_exit}
                 id="p-text"
                 className="p_1 h-full flex items-center  w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
-                PROJECT 2
+                URBAN EATS - RESTAURANT WEBSITE
               </h1>
             </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate3}
                 onMouseLeave={img_translate_exit}
                 id="p-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
-                PROJECT
+                DISNEY PLUS CLONE
               </h1>
             </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate4}
                 onMouseLeave={img_translate_exit}
                 id="p-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
-                PROJECT
+                IPHONE WEBSITE
               </h1>
             </div>
           </div>
@@ -276,7 +279,7 @@ const Projects = () => {
       </div>
       {/* AI SECTION */}
       <div
-        className="preview2 absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
+        className="opacity-0 md:opacity-100 preview2 absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
         st
       >
         <img
@@ -298,44 +301,44 @@ const Projects = () => {
           </div>
 
           <div className="flex flex-col gap-3 ">
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate1_ai}
                 onMouseLeave={img_translate_exit_ai}
                 id="p2-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]  "
               >
-                PROJECT 1
+                CHOOSE YOUR ADVENTURE GAME
               </h1>
             </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
               <h1
                 onMouseEnter={img_translate2_ai}
                 onMouseLeave={img_translate_exit_ai}
                 id="p2-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
-                PROJECT 2
+                ANIME CHARACTER CLONES
               </h1>
             </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate3_ai}
                 onMouseLeave={img_translate_exit_ai}
                 id="p2-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
-                PROJECT
+                SPEAK TO SITE
               </h1>
             </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
               <h1
                 onMouseEnter={img_translate4_ai}
                 onMouseLeave={img_translate_exit_ai}
                 id="p2-text"
                 className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
               >
-                PROJECT
+                ESSAY AI
               </h1>
             </div>
           </div>

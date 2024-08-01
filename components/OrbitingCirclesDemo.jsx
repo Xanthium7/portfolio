@@ -1,57 +1,67 @@
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
+import { useEffect, useState } from "react";
+import TextRevealByWord from "./magicui/text-reveal";
+
+import { MagicCard } from "@/components/magicui/magic-card";
 
 export function OrbitingCirclesDemo() {
+  const [radius1, setRadius1] = useState();
+  const [radius2, setRadius2] = useState();
+  useEffect(() => {
+    setRadius1(window.innerWidth >= 768 ? 350 : 140);
+    setRadius2(window.innerWidth >= 768 ? 180 : 80);
+  }, []);
+
   return (
     <div>
       <div>
         <VelocityScroll
           text="VISION2LIFE ° INNOVATIVE ° CREATIVE ° PASSIONATE ° VERSATILE °"
-          default_velocity={2}
+          default_velocity={1}
           className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-white drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
         />
       </div>
-      <div className="relative flex h-[100vh] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
-        <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+      <div className="text_scroll_animation_thingy z-10 flex  min-h-[16rem] items-center justify-center rounded-lg  bg-black text-center ">
+        <TextRevealByWord
+          className={"text-center dark uppercase  "}
+          text="enchanting your visions in to reality"
+        />
+      </div>
+      <div className="relative flex h-[100vh]  w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
+        <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-4xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
           ORAGNISATIONS
         </span>
-
-        {/* Inner Circles */}
-        <OrbitingCircles
-          className="size-[50px] border-none bg-transparent"
-          duration={20}
-          delay={20}
-          radius={180}
+        <div
+          className={
+            "flex h-[500px] mt-20 px-10  w-full flex-col gap-4 lg:h-[250px] lg:flex-row"
+          }
         >
-          <Icons.whatsapp />
-        </OrbitingCircles>
-        <OrbitingCircles
-          className="size-[50px] border-none bg-transparent"
-          duration={20}
-          delay={50}
-          radius={180}
-        >
-          <Icons.notion />
-        </OrbitingCircles>
-
-        {/* Outer Circles (reverse) */}
-        <OrbitingCircles
-          className="size-[50px] border-none bg-transparent"
-          radius={300}
-          duration={20}
-          reverse
-        >
-          <Icons.googleDrive />
-        </OrbitingCircles>
-        <OrbitingCircles
-          className="size-[50px] border-none bg-transparent"
-          radius={300}
-          duration={20}
-          delay={20}
-          reverse
-        >
-          <Icons.gitHub />
-        </OrbitingCircles>
+          <MagicCard
+            className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
+            gradientColor={"#262626"}
+          >
+            MEDIA CLUB
+          </MagicCard>
+          <MagicCard
+            className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
+            gradientColor={"#262626"}
+          >
+            GDC
+          </MagicCard>
+          <MagicCard
+            className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
+            gradientColor={"#262626"}
+          >
+            TINKERHUB
+          </MagicCard>
+          <MagicCard
+            className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
+            gradientColor={"#262626"}
+          >
+            CAPESTONE
+          </MagicCard>
+        </div>
       </div>
     </div>
   );

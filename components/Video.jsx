@@ -46,7 +46,7 @@ const Video = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.55;
+      videoRef.current.playbackRate = 0.7;
     }
   }, []);
   return (
@@ -54,13 +54,13 @@ const Video = () => {
       <div className="mt-12 relative overflow-hidden">
         <video
           ref={videoRef}
-          className="h-[50vh] md:h-[70vh] w-full object-cover bg-fixed  opacity-50 "
+          className="h-[50vh] md:h-[70vh] w-full object-cover object-top bg-fixed  opacity-50 "
           autoPlay
           muted
           loop
           preload="none"
         >
-          <source type="video/mp4" src="/hero_me1.mp4" />
+          <source type="video/mp4" src="/hero_me2.mp4" />
         </video>
       </div>
       <div className=" mt-24 md:mt-12 mx-2 md:mx-5 relative overflow-hidden">
@@ -70,21 +70,20 @@ const Video = () => {
           className=" details text-sm md:text-3xl text-center uppercase md:leading-[2.5rem] relative translate-y-52"
         >
           <span className="text-[#f2f2f2]  ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ad
+            Hey! I'm the dev who turns caffeine into code.{" "}
           </span>
           <span className="text-[#f2f2f2]  ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ad
+            When not pushing pixels, I'm pushing weights or binging anime.
           </span>
           <span className="text-[#f2f2f2]  ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ad
+            I've crafted full-stack marvels and even dabbled in AI magic.
           </span>
           <span className="text-[#f2f2f2]  ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ad
+            Let's create digital magic together
           </span>
 
           <span className="hidden  md:inline  ">
-            Excepturi vero illo ut laudantium necessitatibus hic! A nostrum
-            laboriosam temporibus dicta!
+            Bring you digital ideas and vison true
           </span>
         </p>
       </div>

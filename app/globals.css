@@ -6,6 +6,11 @@ body{
   background-color: black;
   color: rgba(252, 248, 253, 0.89);
 }
+.text_scroll_animation_thingy{
+  /* background-color: black; */
+  color: #5b27b7 !important;
+  /* font-size: 300px; */
+}
 
 /* 
 @layer base {
