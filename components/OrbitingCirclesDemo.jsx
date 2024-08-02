@@ -27,7 +27,7 @@ export function OrbitingCirclesDemo() {
   // }, []);
 
   return (
-    <div className="cursor-none orb_div relative">
+    <div className="cursor-none orb_div relative overflow-clip">
       <div>
         <VelocityScroll
           text="VISION2LIFE ° INNOVATIVE ° CREATIVE ° PASSIONATE ° VERSATILE ° FLEXIBLE ° ARTISTIC °"

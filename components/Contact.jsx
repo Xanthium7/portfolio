@@ -193,11 +193,18 @@ const Contact = () => {
               <div className="overflow-hidden relative">
                 <h1
                   id="c_text"
-                  className="text-3xl text-center md:text-8xl uppercase font-semibold"
+                  className="text-2xl text-center md:text-8xl uppercase font-semibold"
                   style={{ textShadow: "3px 3px 5px #5b27b7" }}
                 >
                   {" "}
-                  CONTACT
+                  LIKE WHAT YOU{" "}
+                  <span
+                    style={{ textShadow: "0px 0px 0px #000000" }}
+                    className="text-[#5b27b7]"
+                  >
+                    SEE{" "}
+                  </span>
+                  ?
                 </h1>
               </div>
             </div>
