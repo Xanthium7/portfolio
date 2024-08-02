@@ -73,17 +73,19 @@ const Video = () => {
             Hey! I'm the dev who turns caffeine into code.{" "}
           </span>
           <span className="text-[#f2f2f2]  ">
-            When not pushing pixels, I'm pushing weights or binging anime.
+            When I'm not in the digital realm, I'm pushing weights, drawing some
+            shi or binging anime.
           </span>
           <span className="text-[#f2f2f2]  ">
             I've crafted full-stack marvels and even dabbled in AI magic.
           </span>
           <span className="text-[#f2f2f2]  ">
-            Let's create digital magic together
+            Let's join forces and create some mind-blowing tech magic together!
           </span>
 
           <span className="hidden  md:inline  ">
-            Bring you digital ideas and vison true
+            {" "}
+            Bring you digital ideas and vision true
           </span>
         </p>
       </div>
