@@ -231,7 +231,7 @@ const Projects = () => {
           </div>
 
           <div className="flex flex-col gap-3 ">
-            <a href="">
+            <a href="https://github.com/Xanthium7/Tesla_Clone" target="_blank">
               <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-48 opacity-20 hover:opacity-100 transition-all">
                 <h1
                   onMouseEnter={img_translate1}
@@ -243,37 +243,48 @@ const Projects = () => {
                 </h1>
               </div>
             </a>
-
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl   relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
-              <h1
-                onMouseEnter={img_translate2}
-                onMouseLeave={img_translate_exit}
-                id="p-text"
-                className="p_1 h-full flex items-center  w-full border-b-[1px] border-b-[#d3d3d3c5]"
-              >
-                URBAN EATS - RESTAURANT WEBSITE
-              </h1>
-            </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
-              <h1
-                onMouseEnter={img_translate3}
-                onMouseLeave={img_translate_exit}
-                id="p-text"
-                className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
-              >
-                DISNEY PLUS CLONE
-              </h1>
-            </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
-              <h1
-                onMouseEnter={img_translate4}
-                onMouseLeave={img_translate_exit}
-                id="p-text"
-                className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
-              >
-                IPHONE WEBSITE
-              </h1>
-            </div>
+            <a
+              href="https://github.com/Xanthium7/urban-eat-host"
+              target="_blank"
+            >
+              <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl   relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
+                <h1
+                  onMouseEnter={img_translate2}
+                  onMouseLeave={img_translate_exit}
+                  id="p-text"
+                  className="p_1 h-full flex items-center  w-full border-b-[1px] border-b-[#d3d3d3c5]"
+                >
+                  URBAN EATS - RESTAURANT WEBSITE
+                </h1>
+              </div>
+            </a>
+            <a
+              href="https://github.com/Xanthium7/Disney_plus_clone"
+              target="_blank"
+            >
+              <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+                <h1
+                  onMouseEnter={img_translate3}
+                  onMouseLeave={img_translate_exit}
+                  id="p-text"
+                  className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
+                >
+                  DISNEY PLUS CLONE
+                </h1>
+              </div>
+            </a>
+            <a href="https://github.com/Xanthium7/apple-clone" target="_blank">
+              <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+                <h1
+                  onMouseEnter={img_translate4}
+                  onMouseLeave={img_translate_exit}
+                  id="p-text"
+                  className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
+                >
+                  IPHONE WEBSITE
+                </h1>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -301,46 +312,66 @@ const Projects = () => {
           </div>
 
           <div className="flex flex-col gap-3 ">
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
-              <h1
-                onMouseEnter={img_translate1_ai}
-                onMouseLeave={img_translate_exit_ai}
-                id="p2-text"
-                className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]  "
-              >
-                CHOOSE YOUR ADVENTURE GAME
-              </h1>
-            </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
-              <h1
-                onMouseEnter={img_translate2_ai}
-                onMouseLeave={img_translate_exit_ai}
-                id="p2-text"
-                className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
-              >
-                ANIME CHARACTER CLONES
-              </h1>
-            </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
-              <h1
-                onMouseEnter={img_translate3_ai}
-                onMouseLeave={img_translate_exit_ai}
-                id="p2-text"
-                className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
-              >
-                SPEAK TO SITE
-              </h1>
-            </div>
-            <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
-              <h1
-                onMouseEnter={img_translate4_ai}
-                onMouseLeave={img_translate_exit_ai}
-                id="p2-text"
-                className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
-              >
-                ESSAY AI
-              </h1>
-            </div>
+            <a
+              href="https://github.com/Xanthium7/Ai_Adventure_Game_Py"
+              target="_blank"
+            >
+              <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+                <h1
+                  onMouseEnter={img_translate1_ai}
+                  onMouseLeave={img_translate_exit_ai}
+                  id="p2-text"
+                  className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]  "
+                >
+                  CHOOSE YOUR ADVENTURE GAME
+                </h1>
+              </div>
+            </a>
+            <a
+              href="https://github.com/Xanthium7/LightYagami_ai"
+              target="_blank"
+            >
+              <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100  transition-all">
+                <h1
+                  onMouseEnter={img_translate2_ai}
+                  onMouseLeave={img_translate_exit_ai}
+                  id="p2-text"
+                  className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
+                >
+                  ANIME CHARACTER CLONES
+                </h1>
+              </div>
+            </a>
+            <a
+              href="https://github.com/Xanthium7/saturday-hack-night-template"
+              target="_blank"
+            >
+              <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+                <h1
+                  onMouseEnter={img_translate3_ai}
+                  onMouseLeave={img_translate_exit_ai}
+                  id="p2-text"
+                  className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
+                >
+                  SPEAK TO SITE
+                </h1>
+              </div>
+            </a>
+            <a
+              href="https://github.com/Xanthium7/Novel_porject"
+              target="_blank"
+            >
+              <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
+                <h1
+                  onMouseEnter={img_translate4_ai}
+                  onMouseLeave={img_translate_exit_ai}
+                  id="p2-text"
+                  className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
+                >
+                  ESSAY AI
+                </h1>
+              </div>
+            </a>
           </div>
         </div>
       </div>

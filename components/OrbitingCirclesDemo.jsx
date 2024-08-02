@@ -2,8 +2,7 @@ import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { useEffect, useRef, useState } from "react";
 import TextRevealByWord from "./magicui/text-reveal";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ShineBorder from "@/components/magicui/shine-border";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { useGSAP } from "@gsap/react";
 
@@ -54,30 +53,53 @@ export function OrbitingCirclesDemo() {
             "flex h-[500px] mt-20 px-10  w-full flex-col gap-4 lg:h-[250px] lg:flex-row"
           }
         >
-          <MagicCard
-            className=" flex-col items-center justify-center border border-[#242424] shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
-            gradientColor={"#9900ff"}
+          <ShineBorder
+            className="relative flex p-[2px]  w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
+            color={["#8d12ac", "#c23e9a", "#8f15e0"]}
+            duration={8}
           >
-            MEDIA CLUB
-          </MagicCard>
-          <MagicCard
-            className=" flex-col items-center justify-center border border-[#242424] shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
-            gradientColor={"#9900ff"}
+            <MagicCard
+              className=" flex-col items-center justify-center border border-[#000] shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
+              gradientColor={"#9900ff"}
+            >
+              MEDIA CLUB
+            </MagicCard>
+          </ShineBorder>
+          <ShineBorder
+            className="relative flex p-[2px]  w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
+            color={["#8d12ac", "#c23e9a", "#8f15e0"]}
+            duration={10}
           >
-            GDC
-          </MagicCard>
-          <MagicCard
-            className=" flex-col items-center justify-center border border-[#242424] shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
-            gradientColor={"#9900ff"}
+            <MagicCard
+              className=" flex-col items-center justify-center border border-[#000] shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
+              gradientColor={"#9900ff"}
+            >
+              TINKERHUB
+            </MagicCard>
+          </ShineBorder>
+          <ShineBorder
+            className="relative flex p-[2px]  w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
+            color={["#8d12ac", "#c23e9a", "#8f15e0"]}
+            duration={15}
           >
-            TINKERHUB
-          </MagicCard>
-          <MagicCard
-            className=" flex-col items-center justify-center border border-[#242424] shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
-            gradientColor={"#9900ff"}
+            <MagicCard
+              className=" flex-col items-center justify-center border border-[#000] shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
+              gradientColor={"#9900ff"}
+            >
+              GDC
+            </MagicCard>
+          </ShineBorder>
+          <ShineBorder
+            className="relative flex p-[2px]  w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
+            color={["#8d12ac", "#c23e9a", "#8f15e0"]}
           >
-            CAPESTONE
-          </MagicCard>
+            <MagicCard
+              className=" flex-col items-center justify-center border border-[#000] shadow-2xl whitespace-nowrap text-xl md:text-4xl bg-[#000] text-white"
+              gradientColor={"#9900ff"}
+            >
+              CAPESTONE
+            </MagicCard>
+          </ShineBorder>
         </div>
       </div>
     </div>
