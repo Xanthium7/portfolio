@@ -27,7 +27,7 @@ export function OrbitingCirclesDemo() {
   // }, []);
 
   return (
-    <div className="cursor-none orb_div relative overflow-clip">
+    <div className="cursor-none orb_div relative ">
       <div>
         <VelocityScroll
           text="VISION2LIFE ° INNOVATIVE ° CREATIVE ° PASSIONATE ° VERSATILE ° FLEXIBLE ° ARTISTIC °"
@@ -37,7 +37,7 @@ export function OrbitingCirclesDemo() {
       </div>
       <div
         // ref={textRef}
-        className="text_scroll_animation_thingy z-10 flex  min-h-[16rem] items-center justify-center rounded-lg  bg-black text-center "
+        className="text_scroll_animation_thingy z-10 flex min-h-[16rem]  items-center justify-center rounded-lg  bg-black text-center "
       >
         <TextRevealByWord
           className={"text-center dark uppercase  "}
