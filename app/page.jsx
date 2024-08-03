@@ -273,7 +273,7 @@ export default function Home() {
           id="nav"
           className="h-[60px] px-10 py-2 flex items-center justify-between border-b-[1px] border-[#bbbbbb27] "
         >
-          <div className=" text-sm font-bold">AKSHHAY KM</div>
+          <div className=" text-sm font-bold akshhay ">AKSHHAY KM</div>
           <div className="text-xs hidden md:block transition-all hover:opacity-20 cursor-pointer">
             <a href="#p2-text">AI DEVELOPER</a>
           </div>

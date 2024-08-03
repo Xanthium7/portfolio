@@ -189,6 +189,10 @@ body {
   
 }
 
+.akshhay:hover {
+  animation: flicker 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+}
+
 .velocity_scroll_thingy {
   animation: flicker 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
 }

@@ -357,10 +357,7 @@ const Projects = () => {
                 </h1>
               </div>
             </a>
-            <a
-              href="https://github.com/Xanthium7/Novel_porject"
-              target="_blank"
-            >
+            <a href="https://github.com/Xanthium7/Lawyer_bot" target="_blank">
               <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-40 opacity-20 hover:opacity-100 transition-all">
                 <h1
                   onMouseEnter={img_translate4_ai}
@@ -368,7 +365,7 @@ const Projects = () => {
                   id="p2-text"
                   className="p_1 h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]"
                 >
-                  ESSAY AI
+                  LAWYER BOT
                 </h1>
               </div>
             </a>
