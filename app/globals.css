@@ -159,6 +159,19 @@ body {
   
     
 }
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(108, 16, 184);
+  border-radius: 0.5rem;
+  border: 3px solid rgb(123, 13, 226);
+}
 
 body {
   overflow-x: hidden;
