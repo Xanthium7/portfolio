@@ -16,6 +16,7 @@ import Contact from "@/components/Contact";
 import CoolShit from "@/components/CoolShit";
 import { OrbitingCirclesDemo } from "@/components/OrbitingCirclesDemo";
 import Particles from "@/components/magicui/particles";
+import Hyperspeed from "@/components/Hyperspeed";
 // import Organisations from "@/components/Organisations";
 
 gsap.registerPlugin(ScrollTrigger);

@@ -6,6 +6,7 @@ import Particles from "@/components/magicui/particles";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
+import Hyperspeed from "./Hyperspeed";
 
 const Circle = forwardRef(({ className, children }, ref) => {
   return (
@@ -172,7 +173,7 @@ const Contact = () => {
             )}
           />
         </div> */}
-        <AnimatedGridPattern
+        {/* <AnimatedGridPattern
           numSquares={70}
           maxOpacity={0.1}
           duration={1}
@@ -183,7 +184,9 @@ const Contact = () => {
             "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
             "inset-x-0  h-[100%] skew-y-12"
           )}
-        />
+
+        /> */}
+        <Hyperspeed></Hyperspeed>
         <div className=" md:mx-10 h-full w-full">
           <div
             id="text-holder"

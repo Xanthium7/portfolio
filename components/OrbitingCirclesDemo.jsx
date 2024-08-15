@@ -39,6 +39,7 @@ export function OrbitingCirclesDemo() {
         // ref={textRef}
         className="text_scroll_animation_thingy z-10 flex min-h-[16rem]  items-center justify-center rounded-lg  bg-black text-center "
       >
+        {/* <Hyperspeed /> */}
         <TextRevealByWord
           className={"text-center dark uppercase  "}
           text="enchanting your visions in to reality"
