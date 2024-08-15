@@ -173,7 +173,7 @@ const Contact = () => {
             )}
           />
         </div> */}
-        {/* <AnimatedGridPattern
+        <AnimatedGridPattern
           numSquares={70}
           maxOpacity={0.1}
           duration={1}
@@ -184,9 +184,8 @@ const Contact = () => {
             "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
             "inset-x-0  h-[100%] skew-y-12"
           )}
-
-        /> */}
-        <Hyperspeed></Hyperspeed>
+        />
+        {/* <Hyperspeed></Hyperspeed> */}
         <div className=" md:mx-10 h-full w-full">
           <div
             id="text-holder"
