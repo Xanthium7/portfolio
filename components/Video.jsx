@@ -51,7 +51,7 @@ const Video = () => {
   }, []);
   return (
     <section className="h-screen w-screen  cursor-none">
-      <div className="mt-12 relative overflow-hidden">
+      <div className="mt-32 relative overflow-hidden">
         <video
           ref={videoRef}
           className="h-[50vh] md:h-[70vh] w-full object-cover object-top bg-fixed  opacity-50 "

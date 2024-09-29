@@ -22,7 +22,7 @@ const Skills = () => {
       scrollTrigger: {
         trigger: "#p_holder",
         start: "top",
-        end: "+=2100",
+        end: "+=2150",
         scrub: 1,
         pin: true,
         onUpdate: (self) => {

@@ -16,7 +16,7 @@ import Contact from "@/components/Contact";
 import CoolShit from "@/components/CoolShit";
 import { OrbitingCirclesDemo } from "@/components/OrbitingCirclesDemo";
 import Particles from "@/components/magicui/particles";
-import Hyperspeed from "@/components/Hyperspeed";
+// import Hyperspeed from "@/components/Hyperspeed";
 // import Organisations from "@/components/Organisations";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -282,7 +282,7 @@ export default function Home() {
             <a href="#p-text">FULL STACK</a>
           </div>
           <div className="border border-1 border-white p-2 rounded-full px-6 text-xs transition-all hover:bg-slate-100 hover:text-black">
-            <a href="">CONTACT</a>
+            <a href="#contac_me">CONTACT</a>
           </div>
         </nav>
 

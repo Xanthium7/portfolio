@@ -186,7 +186,7 @@ const Contact = () => {
           )}
         />
         {/* <Hyperspeed></Hyperspeed> */}
-        <div className=" md:mx-10 h-full w-full">
+        <div id="contac_me" className=" md:mx-10 h-full w-full">
           <div
             id="text-holder"
             className="mt-48 overflow-hidden h-full w-full  "

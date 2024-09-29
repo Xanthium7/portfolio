@@ -28,7 +28,7 @@ export function OrbitingCirclesDemo() {
 
   return (
     <div className="cursor-none orb_div relative ">
-      <div>
+      <div className="bg-[#000]">
         <VelocityScroll
           text="VISION2LIFE ° INNOVATIVE ° CREATIVE ° PASSIONATE ° VERSATILE ° FLEXIBLE ° ARTISTIC °"
           default_velocity={1}
