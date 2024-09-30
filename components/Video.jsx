@@ -70,17 +70,17 @@ const Video = () => {
           className=" details text-sm md:text-3xl text-center uppercase md:leading-[2.5rem] relative translate-y-52"
         >
           <span className="text-[#f2f2f2]  ">
-            Hey! I'm the dev who turns caffeine into code.{" "}
+            Hey! I'm a developer whose currently Student at MITS.{" "}
           </span>
           <span className="text-[#f2f2f2]  ">
-            When I'm not in the digital realm, I'm pushing weights, drawing some
-            shi or binging anime.
+            When I'm not finding bugs, I'm pushing weights, sketching or binging
+            anime.
           </span>
           <span className="text-[#f2f2f2]  ">
-            I've crafted full-stack marvels and even dabbled in AI magic.
+            I've crafted full-stack marvels and even dabbled in AI tech.
           </span>
           <span className="text-[#f2f2f2]  ">
-            Let's join forces and create some mind-blowing tech magic together!
+            Let's join forces and create some mind-blowing tech together!
           </span>
 
           <span className="hidden  md:inline  ">
