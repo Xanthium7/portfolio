@@ -16,6 +16,7 @@ import Contact from "@/components/Contact";
 import CoolShit from "@/components/CoolShit";
 import { OrbitingCirclesDemo } from "@/components/OrbitingCirclesDemo";
 import Particles from "@/components/magicui/particles";
+import TileFlip from "@/components/TileFlip";
 // import Hyperspeed from "@/components/Hyperspeed";
 // import Organisations from "@/components/Organisations";
 
@@ -356,6 +357,7 @@ export default function Home() {
       </main>
       <Video></Video>
       <Skills></Skills>
+      {/* <TileFlip></TileFlip> */}
       {/* <CoolShit></CoolShit> */}
       {/* <Organisations></Organisations> */}
       <OrbitingCirclesDemo></OrbitingCirclesDemo>
@@ -363,6 +365,7 @@ export default function Home() {
       <Projects></Projects>
       <Parallax></Parallax>
 
+      <TileFlip></TileFlip>
       <Contact></Contact>
       {/* <Projects></Projects> */}
       {/*  */}
