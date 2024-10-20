@@ -47,7 +47,7 @@ export function OrbitingCirclesDemo() {
       </div>
       <div className="relative flex h-[100vh]  w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
         <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-[#000000] to-[#fffeff] bg-clip-text text-center text-4xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
-          ORAGNISATIONS
+          ORGANISATIONS
         </span>
         <div
           className={
