@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const Projects = () => {
@@ -212,10 +213,12 @@ const Projects = () => {
         className="opacity-0 md:opacity-100 preview absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
         st
       >
-        <img
+        <Image
           className="preview_img w-full h-fit opacity-0"
           src="/p_img.png"
           alt=""
+          width={368}
+          height={190}
         />
       </div>
       <div className="h-screen w-screen ">
@@ -293,10 +296,12 @@ const Projects = () => {
         className="opacity-0 md:opacity-100 preview2 absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
         st
       >
-        <img
+        <Image
           className="preview_img2 w-full h-fit opacity-0"
           src="/p2_img.png"
           alt=""
+          width={368}
+          height={190}
         />
       </div>
       <div className="h-screen w-screen ">

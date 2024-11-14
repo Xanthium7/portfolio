@@ -58,6 +58,7 @@ const Video = () => {
           autoPlay
           muted
           loop
+          loading="lazy"
           preload="none"
         >
           <source type="video/mp4" src="/hero_me2.mp4" />

@@ -9,6 +9,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Arrow from "./Arrow";
+import Marquee from "./ui/marquee";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,29 +111,32 @@ const Skills = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1400,
+    speed: 1500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
+    // autoplaySpeed:-100,
     pauseOnHover: false,
-    nextArrow: <Arrow />,
-    prevArrow: <Arrow />,
+    cssEase: "ease",
+    // nextArrow: <Arrow />,
+    // prevArrow: <Arrow />,
 
-    autoplaySpeed: 0,
-    cssEase: "linear",
+    autoplaySpeed: -100,
+    // cssEase: "linear",
     // responsive: res,
   };
   const settings2 = {
     dots: false,
     infinite: true,
-    speed: 1400,
+    speed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     pauseOnHover: false,
     rtl: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
+    autoplaySpeed: -100,
+    cssEase: "ease",
+    // cubicBezier: "0.25, 0.1, 0.25, 1",
     // responsive: res,
   };
   return (
@@ -141,64 +145,63 @@ const Skills = () => {
         className={`flex flex-col gap-16 ${inter.className} text-4xl md:text-8xl text-transparent`}
       >
         <div className="slider-container ">
-          <Slider {...settings}>
-            <div className="">
+          <Marquee className="[--duration:20s]">
+            <div className="w-1/3 mx-36 h-fit ">
               <h3 className="text-center scroll_text_moving ">REACT</h3>
             </div>
-            <div>
+            <div className="w-1/3 mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">TAILWIND</h3>
             </div>
-            <div>
+            <div className="w-1/3 mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">ES6</h3>
             </div>
-            <div>
+            <div className="w-1/3 mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">PYTHON</h3>
             </div>
-            <div>
+            <div className="w-1/3 mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">TYPESCRIPT</h3>
             </div>
-            <div>
+            <div className="w-1/3 mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">HTMLX</h3>
             </div>
-            <div>
+            <div className="w-1/3 mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">CSS</h3>
             </div>
-            <div>
+            <div className="w-1/3 mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">JAVASCRIPT</h3>
             </div>
-            <div>
+            <div className="w-1/3 mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">MSQL</h3>
             </div>
-          </Slider>
+          </Marquee>
         </div>
         <div className="slider-container text-4xl md:text-8xl">
-          <Slider {...settings2}>
-            <div className="mx-5">
+          <Marquee reverse={true} className="[--duration:20s]">
+            <div className="w-1/3 mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">DJANGO</h3>
             </div>
-            <div className="mx-5">
+            <div className="w-1/3 mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">GSAP</h3>
             </div>
-            <div className="px-5">
+            <div className="w-1/3 mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">NEXTJS</h3>
             </div>
-            <div className="px-5">
+            <div className="w-1/3 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">OPENAI</h3>
             </div>
-            <div className="px-5">
+            <div className="w-1/3 mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">LLAMA</h3>
             </div>
-            <div className="px-5">
+            <div className="w-1/3 mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">FIGMA</h3>
             </div>
-            <div className="px-5">
+            <div className="w-1/3 mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving pl-6"> FIREBASE</h3>
             </div>
-
-            <div className="px-5">
+            <div className="w-1/3 mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">BLENDER</h3>
             </div>
-          </Slider>
+          </Marquee>
         </div>
       </div>
       <div id="h_holder" className="hidden md:flex  w-full  justify-center">

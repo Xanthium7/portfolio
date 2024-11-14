@@ -55,7 +55,7 @@ const Parallax = () => {
         end: "bottom center", // End pinning at the bottom of the viewport
         scrub: 0.1, // Smooth scrubbing, consider setting to a number for smoother scrubbing
       },
-      y: window.innerWidth > 768 ? "40%" : "-30%",
+      y: window.innerWidth > 768 ? "40%" : "-45%",
       duration: 2,
     });
     gsap.to("#img_holder_3", {
@@ -93,13 +93,31 @@ const Parallax = () => {
               className="w-1/2 md:w-1/4 h-full flex flex-col gap-2 md:gap-5 translate-y-[0%]"
             >
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
-                <img className=" object-cover" src="_1.png" alt="" />
+                <Image
+                  className=" object-cover w-auto h-auto"
+                  src="/_1.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="h-1/3 overflow-hidden object-center">
-                <img className=" object-cover" src="_2.png" alt="" />
+                <Image
+                  className=" object-cover"
+                  src="/_2.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="h-1/3 overflow-hidden object-center">
-                <img className=" object-cover" src="_3.png" alt="" />
+                <Image
+                  className=" object-cover"
+                  src="/_3.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
             </div>
             <div
@@ -107,13 +125,31 @@ const Parallax = () => {
               className=" w-1/2  md:w-1/4 h-full flex flex-col gap-2 md:gap-5 md:translate-y-[-50%]"
             >
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
-                <img className=" object-cover " src="_4.png" alt="" />
+                <Image
+                  className=" object-cover "
+                  src="/_4.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
-                <img className=" object-cover" src="_11.png" alt="" />
+                <Image
+                  className=" object-cover"
+                  src="/_11.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="h-1/3  overflow-hidden object-center  rounded-3xl">
-                <img className="  object-cover" src="_6.png" alt="" />
+                <Image
+                  className="  object-cover"
+                  src="/_6.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
             </div>
             <div
@@ -121,13 +157,31 @@ const Parallax = () => {
               className="w-0 md:w-1/4  h-full flex flex-col gap-2 md:gap-5"
             >
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
-                <img className=" object-cover" src="_7.png" alt="" />
+                <Image
+                  className=" object-cover"
+                  src="/_7.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
-                <img className=" object-cover" src="_10.png" alt="" />
+                <Image
+                  className=" object-cover"
+                  src="/_10.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
-                <img className=" object-cover" src="_8.png" alt="" />
+                <Image
+                  className=" object-cover"
+                  src="/_8.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
             </div>
             <div
@@ -135,13 +189,31 @@ const Parallax = () => {
               className="w-0 md:w-1/4 h-full  flex flex-col gap-2 md:gap-5 translate-y-[-10%]"
             >
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
-                <img className=" object-cover" src="_8.png" alt="" />
+                <Image
+                  className=" object-cover"
+                  src="/_8.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
-                <img className=" object-cover" src="_9.png" alt="" />
+                <Image
+                  className=" object-cover"
+                  src="/_9.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
-                <img className=" object-cover" src="_4.png" alt="" />
+                <Image
+                  className=" object-cover"
+                  src="/_4.png"
+                  alt=""
+                  width={500}
+                  height={500}
+                />
               </div>
             </div>
           </div>
