@@ -68,7 +68,7 @@ const Video = () => {
         <p
           onMouseEnter={enlarge}
           onMouseLeave={delarge}
-          className=" details text-sm md:text-3xl text-center uppercase md:leading-[2.5rem] relative translate-y-52"
+          className=" details text-xs md:text-3xl text-center uppercase md:leading-[2.5rem] relative translate-y-52"
         >
           <span className="text-[#f2f2f2]  ">
             Hey! I'm a developer whose currently Student at MITS.{" "}

@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+
 import { Bebas_Neue } from "next/font/google";
-import Lottie from "lottie-react";
-import animationData from "../public/s_load.json";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import Arrow from "./Arrow";
+
 import Marquee from "./ui/marquee";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -83,122 +81,67 @@ const Skills = () => {
       ease: "power1.inOut",
     });
   }, []);
-  const res = [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-  ];
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    // autoplaySpeed:-100,
-    pauseOnHover: false,
-    cssEase: "ease",
-    // nextArrow: <Arrow />,
-    // prevArrow: <Arrow />,
 
-    autoplaySpeed: -100,
-    // cssEase: "linear",
-    // responsive: res,
-  };
-  const settings2 = {
-    dots: false,
-    infinite: true,
-    speed: 2000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    pauseOnHover: false,
-    rtl: true,
-    autoplaySpeed: -100,
-    cssEase: "ease",
-    // cubicBezier: "0.25, 0.1, 0.25, 1",
-    // responsive: res,
-  };
   return (
     <div className="h-[40vh] md:h-[330vh] w-screen cursor-none">
       <div
-        className={`flex flex-col gap-16 ${inter.className} text-4xl md:text-8xl text-transparent`}
+        className={`flex flex-col lg:gap-16 ${inter.className} text-4xl md:text-8xl text-transparent`}
       >
         <div className="slider-container ">
           <Marquee className="[--duration:20s]">
-            <div className="w-1/3 mx-36 h-fit ">
+            <div className=" lg:mx-36 h-fit ">
               <h3 className="text-center scroll_text_moving ">REACT</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit">
+            <div className="w-1/3 lg:mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">TAILWIND</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit">
+            <div className="w-1/3 lg:mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">ES6</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit">
+            <div className="w-1/3 lg:mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">PYTHON</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit">
+            <div className="w-1/3 lg:mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">TYPESCRIPT</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit">
+            <div className="w-1/3 lg:mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">HTMLX</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit">
+            <div className="w-1/3 lg:mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">CSS</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit">
+            <div className="w-1/3 lg:mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">JAVASCRIPT</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit">
+            <div className="w-1/3 lg:mx-36 h-fit">
               <h3 className="text-center scroll_text_moving ">MSQL</h3>
             </div>
           </Marquee>
         </div>
         <div className="slider-container text-4xl md:text-8xl">
           <Marquee reverse={true} className="[--duration:20s]">
-            <div className="w-1/3 mx-36 h-fit px-5">
+            <div className="w-1/3 lg:mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">DJANGO</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit px-5">
+            <div className="w-1/3 lg:mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">GSAP</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit px-5">
+            <div className="w-1/3 lg:mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">NEXTJS</h3>
             </div>
             <div className="w-1/3 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">OPENAI</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit px-5">
+            <div className="w-1/3 lg:mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">LLAMA</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit px-5">
+            <div className="w-1/3 lg:mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">FIGMA</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit px-5">
+            <div className="w-1/3 lg:mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving pl-6"> FIREBASE</h3>
             </div>
-            <div className="w-1/3 mx-36 h-fit px-5">
+            <div className="w-1/3 lg:mx-36 h-fit px-5">
               <h3 className="text-center scroll_text_moving ">BLENDER</h3>
             </div>
           </Marquee>
