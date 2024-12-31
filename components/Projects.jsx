@@ -234,7 +234,7 @@ const Projects = () => {
           </div>
 
           <div className="flex flex-col gap-3 ">
-            <a href="https://github.com/Xanthium7/Tesla_Clone" target="_blank">
+            <a href="https://chillverse.vercel.app" target="_blank">
               <div className="h-32 w-full overflow-hidden flex flex-col items-center text-xl md:text-3xl  relative hover:h-48 opacity-20 hover:opacity-100 transition-all">
                 <h1
                   onMouseEnter={img_translate1}
