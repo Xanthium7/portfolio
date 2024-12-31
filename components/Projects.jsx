@@ -242,7 +242,7 @@ const Projects = () => {
                   id="p-text"
                   className="p_1  h-full flex items-center w-full border-b-[1px] border-b-[#d3d3d3c5]  "
                 >
-                  TESLA WEBSITE CLONE
+                  CHILL VERSE - 2D MULTIPLAYER GAME
                 </h1>
               </div>
             </a>
@@ -257,7 +257,7 @@ const Projects = () => {
                   id="p-text"
                   className="p_1 h-full flex items-center  w-full border-b-[1px] border-b-[#d3d3d3c5]"
                 >
-                  URBAN EATS - RESTAURANT WEBSITE
+                  TESLA WEBSITE CLONE
                 </h1>
               </div>
             </a>
