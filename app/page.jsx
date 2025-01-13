@@ -265,12 +265,22 @@ export default function Home() {
       >
         <Particles
           className="absolute inset-0 cursor-none"
-          quantity={150}
+          quantity={130}
           staticity={20}
           ease={80}
           // color={color}
           refresh
         />
+
+        <Particles
+          className="absolute inset-0 cursor-none"
+          quantity={200}
+          staticity={20}
+          ease={80}
+          color={"#8c09c9"}
+          refresh
+        />
+
         <nav
           id="nav"
           className="h-[60px] px-10 py-2 flex items-center justify-between border-b-[1px] border-[#bbbbbb27] "
