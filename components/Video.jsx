@@ -50,11 +50,11 @@ const Video = () => {
     }
   }, []);
   return (
-    <section className="h-screen w-screen  cursor-none">
-      <div className="mt-32 relative overflow-hidden">
+    <section className="h-auto w-full cursor-none">
+      <div className="mt-16 md:mt-32 relative overflow-hidden">
         <video
           ref={videoRef}
-          className="h-[50vh] md:h-[70vh] w-full object-cover object-top bg-fixed  opacity-50 "
+          className="h-[30vh] md:h-[70vh] w-full object-cover object-top bg-fixed opacity-50"
           autoPlay
           muted
           loop
@@ -64,11 +64,11 @@ const Video = () => {
           <source type="video/mp4" src="/hero.mp4" />
         </video>
       </div>
-      <div className=" mt-24 md:mt-12 mx-2 md:mx-5 relative overflow-hidden">
+      <div className="mt-12 md:mt-24 mx-2 md:mx-5 relative overflow-hidden">
         <p
           onMouseEnter={enlarge}
           onMouseLeave={delarge}
-          className=" details text-xs md:text-3xl text-center uppercase md:leading-[2.5rem] relative translate-y-52"
+          className="details text-xs  md:text-3xl text-center pb-10 uppercase md:leading-[2.5rem] relative translate-y-32 md:translate-y-52"
         >
           <span className="text-[#f2f2f2]  ">
             Hey! I'm a developer whose currently Student at MITS.{" "}

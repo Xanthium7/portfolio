@@ -326,7 +326,7 @@ export default function Home() {
                 className=" text-3xl md:text-8xl"
                 style={{ textShadow: "2px 2px 5px #5b27b7" }}
               ></h1>
-              <p className="inline common z-30">
+              <p className="inline common z-30 md:text-base text-xs md:pb-0 pb-14">
                 I'm a developer who loves to create and explore new things. I
                 have a passion for{" "}
                 <span className="text-lg md:text-2xl md:mx-2 text-[#8945ff]">

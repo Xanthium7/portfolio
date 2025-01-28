@@ -211,7 +211,7 @@ const Projects = () => {
     <div className="">
       <div
         className="opacity-0 md:opacity-100 preview absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
-        st
+        st={true}
       >
         <Image
           className="preview_img w-full h-fit opacity-0"
@@ -294,7 +294,7 @@ const Projects = () => {
       {/* AI SECTION */}
       <div
         className="opacity-0 md:opacity-100 preview2 absolute overflow-hidden w-[368px] h-[190px] rounded-3xl z-40 "
-        st
+        st={true}
       >
         <Image
           className="preview_img2 w-full h-fit opacity-0"
