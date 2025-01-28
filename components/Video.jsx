@@ -46,7 +46,7 @@ const Video = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.7;
+      videoRef.current.playbackRate = 0.8;
     }
   }, []);
   return (
@@ -61,7 +61,7 @@ const Video = () => {
           loading="lazy"
           preload="none"
         >
-          <source type="video/mp4" src="/hero_me2.mp4" />
+          <source type="video/mp4" src="/hero.mp4" />
         </video>
       </div>
       <div className=" mt-24 md:mt-12 mx-2 md:mx-5 relative overflow-hidden">
