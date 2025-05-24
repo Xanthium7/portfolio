@@ -212,9 +212,9 @@ const Contact = () => {
             </div>
             <div className="flex flex-col   gap-10  h-4/6">
               <div className=" flex justify-center items-center  w-full"></div>
-              <div className=" w-full flex justify-center items-center">
+              <div className=" w-full  flex justify-center items-center">
                 <div
-                  className="relative  flex h-full w-full items-center justify-center overflow-hidden rounded-lg  bg-background p-10 md:shadow-xl"
+                  className="relative  flex h-full w-full items-center justify-center overflow-hidden rounded-lg   p-10 md:shadow-xl"
                   ref={containerRef}
                 >
                   <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">

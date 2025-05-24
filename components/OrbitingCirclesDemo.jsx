@@ -1,7 +1,7 @@
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { useEffect, useRef, useState } from "react";
-import TextRevealByWord from "./magicui/text-reveal";
+import { TextReveal } from "./magicui/text-reveal"; // Changed import
 import ShineBorder from "@/components/magicui/shine-border";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { useGSAP } from "@gsap/react";
@@ -40,12 +40,13 @@ export function OrbitingCirclesDemo() {
         className="text_scroll_animation_thingy z-10 flex min-h-[16rem]  items-center justify-center rounded-lg  bg-black text-center "
       >
         {/* <Hyperspeed /> */}
-        <TextRevealByWord
+        <TextReveal // Changed component name
           className={"text-center dark uppercase  "}
-          text="enchanting your visions in to reality"
-        />
+        >
+          enchanting your visions in to reality
+        </TextReveal>
       </div>
-      <div className="relative flex h-[100vh]  w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
+      <div className="relative flex h-[100vh]  w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-black md:shadow-xl">
         <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-[#000000] to-[#fffeff] bg-clip-text text-center text-4xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
           ORGANISATIONS
         </span>
