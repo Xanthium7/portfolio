@@ -84,7 +84,7 @@ const Word = ({ children, progress, range }) => {
       <motion.span
         style={{ opacity: opacity }}
         className={
-          "text-purple-500 [text-shadow:0_0_2px_#9f43f5,_0_0_5px_#9f43f5,_0_0_8px_#9f43f5]"
+          "text-purple-400 [text-shadow:0_0_2px_#9f43f5,_0_0_5px_#9f43f5,_0_0_8px_#9f43f5]"
         }
       >
         {children}

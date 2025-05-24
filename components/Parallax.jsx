@@ -39,14 +39,14 @@ const Parallax = () => {
           y: "-40%",
         });
 
-        gsap.to("#img_holder_4", {
+        gsap.to("#img_holder_2", {
           scrollTrigger: {
             trigger: "#holder",
             start: "top bottom",
             end: "bottom top",
             scrub: 1, // Adjusted for smoother effect and removed invalid animate property
           },
-          y: "-40%",
+          y: "-55%",
         });
         gsap.to("#img_holder_3", {
           scrollTrigger: {
@@ -131,7 +131,7 @@ const Parallax = () => {
             </div>
             <div
               id="img_holder_2"
-              className=" w-0 md:w-1/4 h-full  flex flex-col gap-2 md:gap-5 translate-y-[-10%]"
+              className=" w-1/2  md:w-1/4 h-full flex flex-col gap-2 md:gap-5 translate-y-[-20%]"
             >
               <div className="h-1/3 overflow-hidden object-center rounded-3xl">
                 <Image
