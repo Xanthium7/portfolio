@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-const loading = () => {
+const Loading = () => {
   const [dots, setDots] = useState("");
 
   useEffect(() => {
@@ -26,4 +26,4 @@ const loading = () => {
   );
 };
 
-export default loading;
+export default Loading;
