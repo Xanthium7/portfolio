@@ -60,6 +60,14 @@ export default function Home() {
 
   useEffect(() => {
     // Lottie speed adjustment
+    if (
+      !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    )
+      document.querySelector("html").style.fontSize = `${
+        100 / window.devicePixelRatio
+      }%`;
     let lottieSpeedTimeoutId;
     if (animationRef.current) {
       try {
@@ -390,10 +398,10 @@ export default function Home() {
           <div
             onMouseEnter={enlarge}
             onMouseLeave={delarge}
-            className={` dev_text text-[3.2rem] md:text-[15rem] z-30 leading-none font-semibold  relative overflow-hidden `}
+            className={`dev_text z-30  leading-none font-semibold relative  overflow-hidden`}
           >
             <h1
-              className="max-w-[100vw] max-h-fit whitespace-nowrap "
+              className="max-w-full max-h-fit whitespace-nowrap text-[3.2rem] md:text-[12rem] lg:text-[15rem]"
               style={{ textShadow: "2px 2px 5px #5b27b7" }}
             >
               {developerLetters}
