@@ -24,70 +24,108 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const animationRef = useRef(null);
-
   const d = 2;
-
   const [hi_s, setHi_s] = useState(0);
 
+  // Ref to store timeout IDs for hi_text animations to allow cancellation
+  const hiTextAnimationTimeouts = useRef([]);
+
+  // Helper function to animate text and manage timeouts
+  const runTextAnimationSequence = (
+    elementId,
+    texts,
+    interval,
+    startDelay = 0
+  ) => {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    // Clear previous timeouts for this animation sequence
+    hiTextAnimationTimeouts.current.forEach(clearTimeout);
+    hiTextAnimationTimeouts.current = [];
+
+    const initialTimeoutId = setTimeout(() => {
+      texts.forEach((text, index) => {
+        const timeoutId = setTimeout(() => {
+          const currentElement = document.getElementById(elementId);
+          if (currentElement) {
+            currentElement.innerHTML = text;
+          }
+        }, index * interval);
+        hiTextAnimationTimeouts.current.push(timeoutId);
+      });
+    }, startDelay);
+    hiTextAnimationTimeouts.current.push(initialTimeoutId);
+  };
+
   useEffect(() => {
-    // if (
-    //   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    //     navigator.userAgent
-    //   )
-    // )
-    //   document.querySelector("html").style.fontSize = `${
-    //     100 / window.devicePixelRatio
-    //   }%`;
-    try {
-      animationRef.current.setSpeed(0);
-      setTimeout(() => {
-        animationRef.current.setSpeed(0.7);
-      }, 2000);
-    } catch (error) {
-      console.log(error);
+    // Lottie speed adjustment
+    let lottieSpeedTimeoutId;
+    if (animationRef.current) {
+      try {
+        animationRef.current.setSpeed(0);
+        lottieSpeedTimeoutId = setTimeout(() => {
+          if (animationRef.current) {
+            animationRef.current.setSpeed(0.7);
+          }
+        }, 2000);
+      } catch (error) {
+        console.error("Error setting Lottie speed:", error);
+      }
     }
+
+    // Cursor movement
     const moveCursor = (e) => {
       const cursor = document.getElementById("cursor");
-
       if (cursor) {
         cursor.style.left = `${e.clientX}px`;
         cursor.style.top = `${e.clientY}px`;
       }
     };
-
     window.addEventListener("mousemove", moveCursor);
 
-    // Cleanup function to remove the event listener
+    // Cleanup function
     return () => {
       window.removeEventListener("mousemove", moveCursor);
+      if (lottieSpeedTimeoutId) {
+        clearTimeout(lottieSpeedTimeoutId);
+      }
     };
   }, []);
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
-    });
 
-    if (window.scrollY > 0) {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant", // Use 'smooth' for a smooth transition, 'instant' for immediate action
-      });
-    }
-    document.body.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
+  useEffect(() => {
+    // Scroll to top and hide overflow initially
+    window.scrollTo({ top: 0, behavior: "instant" });
+    document.body.style.overflow = "hidden"; // Hides all scrollbars
+    // overflowY will be set to 'auto' later by a GSAP animation's onComplete callback
   }, []);
+
   useEffect(() => {
-    setTimeout(() => {
-      const lenis = new Lenis();
+    // Lenis smooth scrolling initialization
+    let lenisInstance;
+    let rafId;
 
+    const lenisTimeoutId = setTimeout(() => {
+      lenisInstance = new Lenis();
       function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
+        if (lenisInstance) {
+          // Check if lenisInstance is defined
+          lenisInstance.raf(time);
+        }
+        rafId = requestAnimationFrame(raf);
       }
-
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }, 5000);
+
+    return () => {
+      clearTimeout(lenisTimeoutId);
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+      if (lenisInstance && typeof lenisInstance.destroy === "function") {
+        lenisInstance.destroy();
+      }
+    };
   }, []);
 
   const enlarge = () => {
@@ -229,28 +267,26 @@ export default function Home() {
       {letter}
     </span>
   ));
+
+  // Effect for the initial "hi_text" animation after page load delay
   useEffect(() => {
-    setTimeout(() => {
-      const hello = document.getElementById("hi_text");
-      const t = ["Hey", "नमस्ते", "ご挨拶", "ഹായ്", "Hola", "Bonjour", "Hey"];
-      t.map((ele, i) =>
-        setTimeout(() => {
-          hello.innerHTML = ele;
-        }, i * 250)
-      );
-    }, 4700);
-  }, []);
+    const texts = ["Hey", "नमस्ते", "ご挨拶", "ഹായ്", "Hola", "Bonjour", "Hey"];
+    // This delay aligns with other entrance animations
+    runTextAnimationSequence("hi_text", texts, 250, 4700);
+
+    // Cleanup for this effect's timeouts on component unmount
+    return () => {
+      hiTextAnimationTimeouts.current.forEach(clearTimeout);
+    };
+  }, []); // Runs once on mount
+
+  // Effect for "hi_text" animation based on hover state (hi_s)
   useEffect(() => {
-    setTimeout(() => {
-      const hello = document.getElementById("hi_text");
-      const t = ["Hey", "नमस्ते", "ご挨拶", "ഹായ്", "Hola", "Bonjour", "Hey"];
-      t.map((ele, i) =>
-        setTimeout(() => {
-          hello.innerHTML = ele;
-        }, i * 150)
-      );
-    }, 0);
-  }, [hi_s]);
+    // This effect runs on mount (hi_s is 0 initially) and whenever hi_s changes,
+    // replicating the original behavior of animating on hover and on initial load quickly.
+    const texts = ["Hey", "नमस्ते", "ご挨拶", "ഹായ്", "Hola", "Bonjour", "Hey"];
+    runTextAnimationSequence("hi_text", texts, 150, 0); // Faster animation, no initial delay
+  }, [hi_s]); // Runs on mount and when hi_s changes
 
   return (
     <>
