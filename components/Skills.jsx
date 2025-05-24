@@ -25,7 +25,6 @@ const Skills = () => {
         scrub: 1,
         pin: true,
         onUpdate: (self) => {
-          console.log(self.progress);
           //   setscrollPos(self.progress);
           if (self.progress > 0) {
             gsap.to(".ido1", { opacity: 1 });
