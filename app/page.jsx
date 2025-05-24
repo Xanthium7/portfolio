@@ -30,14 +30,14 @@ export default function Home() {
   const [hi_s, setHi_s] = useState(0);
 
   useEffect(() => {
-    if (
-      !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    )
-      document.querySelector("html").style.fontSize = `${
-        100 / window.devicePixelRatio
-      }%`;
+    // if (
+    //   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    //     navigator.userAgent
+    //   )
+    // )
+    //   document.querySelector("html").style.fontSize = `${
+    //     100 / window.devicePixelRatio
+    //   }%`;
     try {
       animationRef.current.setSpeed(0);
       setTimeout(() => {
