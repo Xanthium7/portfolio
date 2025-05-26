@@ -104,8 +104,8 @@ export default function Home() {
   useEffect(() => {
     // Scroll to top and hide overflow initially
     window.scrollTo({ top: 0, behavior: "instant" });
-    document.body.style.overflow = "hidden"; // Hides all scrollbars
-    // overflowY will be set to 'auto' later by a GSAP animation's onComplete callback
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden"; // Ensure html also has overflow hidden
   }, []);
 
   useEffect(() => {
@@ -234,8 +234,11 @@ export default function Home() {
         delay: d + 2.5,
         stagger: 0.05, // Adjust the stagger value as needed for the desired delay between animations
         onComplete: () => {
-          // Re-enable scrolling
+          // Re-enable scrolling for both body and html
           document.body.style.overflowY = "auto";
+          document.body.style.overflowX = "hidden";
+          document.documentElement.style.overflowY = "auto";
+          document.documentElement.style.overflowX = "hidden";
         },
       }
     );

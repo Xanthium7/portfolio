@@ -171,6 +171,8 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
+
+
 body {
   color: white;
   overflow-x: hidden;
@@ -182,20 +184,19 @@ body {
 }
 *::-webkit-scrollbar {
   width: 8px;
-  background-color: black; /* Ensure scrollbar container is black */
-}
+  background-color: black; }
 
 *::-webkit-scrollbar-track {
   background: black; /* Explicitly set track background to black */
 }
 
-html::-webkit-scrollbar-track {
-  background: black !important;
-}
+
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(108, 16, 184);
+  background-color: rgba(108, 16, 184, 0);
+  border: 1px solid #7934f0; 
   border-radius: 0.5rem;
+  margin-left: 10px;
 }
 
 body {
