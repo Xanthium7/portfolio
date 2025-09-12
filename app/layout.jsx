@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-site-verification" content="q9gfWySs4cSUswQgTj13dp7Ws4Kf8USFEalr3ksVG4Y" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
